@@ -1,0 +1,19 @@
+@use "base/fonts";
+@use "base/reset";
+@use "base/base";
+
+@use "components/buttons";
+@use "components/forms";
+@use "components/pagination";
+@use "components/product-card";
+@use "components/offer";
+
+@use "layouts/footer";
+@use "layouts/header";
+
+@use "pages/about";
+@use "pages/cart";
+@use "pages/catalog";
+@use "pages/product-details";
+@use "pages/home";
+@use "pages/contact";

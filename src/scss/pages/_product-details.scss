@@ -1,0 +1,227 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+.product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: variables.$space-40px;
+    margin-bottom: variables.$section-gap;
+
+
+    &__img {
+        margin-bottom: variables.$space-10px;
+    }
+
+    &__thumbs {
+        display: flex;
+        gap: variables.$space-10px;
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: 700;
+        max-width: 455px;
+        line-height: 1.5;
+    }
+
+    &__rating {
+        display: flex;
+        margin-block: variables.$space-15px;
+        gap: variables.$space-15px;
+    }
+
+    &__rating-count {
+        font-size: 13px;
+        color: variables.$color-secondary;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$space-20px;
+        margin-top: variables.$space-40px;
+
+        @extend %section-text;
+    }
+
+    &__price {
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$space-12px;
+    }
+
+    &__options {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$space-30px;
+        margin-block: variables.$space-70px;
+    }
+
+    &__label {
+        font-weight: 700;
+    }
+
+    &__actions {
+        display: flex;
+        gap: variables.$space-12px;
+        margin-bottom: variables.$space-50px;
+    }
+
+    &__quantity {
+        display: flex;
+        gap: variables.$space-25px;
+        align-items: center;
+        border: 2px solid variables.$color-accent;
+        padding-inline: variables.$space-15px;
+        color: variables.$color-muted;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    &__quantity-btn {
+        font-weight: 700;
+    }
+
+    &__btn {
+        flex-grow: 1;
+    }
+
+    &__payment {
+        display: flex;
+        gap: variables.$space-20px;
+    }
+
+    &__payment-list {
+        display: flex;
+        gap: variables.$space-20px;
+        align-items: center;
+    }
+
+    &__payment-title {
+        font-size: 23px;
+        font-weight: 700;
+        color: variables.$color-muted;
+    }
+
+    &__select{
+        border: 1px solid #B92770;
+
+        &:focus-visible{
+            outline: none;
+        }
+    }
+}
+
+.product-tabs {
+    margin-bottom: variables.$section-gap;
+
+    &__nav {
+        display: flex;
+        gap: 125px;
+        justify-content: center;
+        margin-bottom: variables.$space-45px;
+    }
+
+    &__btn {
+        padding-bottom: variables.$space-10px;
+        border-bottom: 2px solid transparent;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &--active {
+            border-bottom-color: variables.$color-accent;
+        }
+    }
+
+    &__panel {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        @extend %section-text;
+    }
+}
+
+.related-products {
+    margin-bottom: variables.$space-60px;
+    justify-content: center;
+
+    &__title {
+        width: fit-content;
+        margin-inline: auto;
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom: variables.$space-70px;
+        padding-bottom: variables.$space-10px;
+
+        border-bottom: 2px solid variables.$color-accent;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: variables.$space-40px;
+    }
+}
+
+.product-reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: variables.$space-90px;
+
+    &__title {
+        margin-bottom: variables.$space-90px;
+        font-weight: 700;
+        color: variables.$color-primary;
+    }
+}
+
+.review {
+    display: flex;
+    gap: variables.$space-25px;
+
+    &__avatar {
+        flex-shrink: 0;
+        width: 46px;
+        height: 46px;
+        padding: variables.$space-10px;
+        border-radius: 50%;
+        background-color: variables.$color-hero-bg;
+        object-fit: contain;
+    }
+
+    &__body {
+        flex-grow: 1;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: variables.$space-20px;
+    }
+
+    &__name {
+        font-weight: 700;
+        color: variables.$color-primary;
+    }
+
+    &__date {
+        font-size: variables.$font-size-small;
+        color: variables.$color-muted;
+    }
+
+    &__stars {
+        display: flex;
+        gap: variables.$space-5px;
+        margin-left: auto;
+    }
+
+    &__text {
+        margin-top: variables.$space-25px;
+    }
+}

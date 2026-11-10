@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/main.css">
+    <link rel="icon" href="../img/icons/icon.svg" type="image/svg+xml">
+    <title>Contact | Best Shop</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__top">
+            <ul class="header__social">
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/twitter.svg" alt="twitter">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/instagram.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+
+            <a class="header__logo" href="../index.html"><img class="header__logo-icon" src="../img/icons/logo.png"
+                                                              alt=""><span
+                    class="header__logo-text">Best Shop</span></a>
+
+            <div class="header__actions">
+                <button class="header__actions-btn" type="button"><img src="../img/icons/user.svg" alt="account">
+                </button>
+                <a class="header__actions-link" href="../html/cart.html"><img src="../img/icons/cart.svg" alt="cart"></a>
+            </div>
+        </div>
+
+        <div class="header__bottom">
+            <nav class="header__bottom-nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a class="header__menu-link" href="../index.html"
+                    >Home</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/catalog.html">Catalog<img
+                            src="../img/icons/arrow.svg" alt=""></a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/about.html">About Us</a>
+                    </li>
+                    <li class="header__menu-item"><a class="header__menu-link header__menu-link--active"
+                                                     href="../html/contact.html" aria-current="page">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="main container">
+    <section class="page-hero">
+        <img class="page-hero__bg" src="../img/contact/banner-image.jpg" alt="">
+        <div class="page-hero__content">
+            <h1 class="page-hero__title">Contact Us</h1>
+            <p class="page-hero__text">Duis vestibulum elit vel neque pharetra vulputate.
+                Duis rutrum non risus in imperdiet.</p>
+        </div>
+    </section>
+
+    <section class="info-grid">
+        <ul class="info-grid__list">
+            <li class="info-grid__item">
+                <img class="info-grid__icon" src="../img/contact/iconlocation.svg" alt="">
+                <h3 class="info-grid__title">
+                    Our Location
+                </h3>
+                <address class="info-grid__text">
+                    1234 NW Bobcat Lane, St. <br>
+                    Robert, MO 65584-5678
+                </address>
+            </li>
+            <li class="info-grid__item">
+                <img class="info-grid__icon" src="../img/contact/icontime.svg" alt="">
+
+                <h3 class="info-grid__title">Operating Time</h3>
+                <p class="info-grid__text">
+                    Monday - Friday: 9am - 6 pm <br>
+                    Weekends: 10:30 am - 6pm
+                </p>
+            </li>
+            <li class="info-grid__item">
+                <img class="info-grid__icon" src="../img/contact/iconmail.svg" alt="">
+
+                <h3 class="info-grid__title">
+                    Our Email
+                </h3>
+                <p class="info-grid__text">
+                    <a class="info-grid__mail" href="mailto:best@shop.com">best@shop.com</a>
+                    <br>
+                    <a class="info-grid__mail" href="mailto:info@bestshop.com">info@bestshop.com</a>
+                </p>
+            </li>
+            <li class="info-grid__item">
+                <img class="info-grid__icon" src="../img/contact/iconphone.svg" alt="">
+
+                <h3 class="info-grid__title">
+                    Call Us
+                </h3>
+                <p class="info-grid__text">
+                    <a class="info-grid__phone" href="tel:2681428413">(268)142-8413</a>
+                    <br>
+                    <a class="info-grid__phone" href="tel:7602652917">(760)265-2917</a>
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <section class="feedback">
+        <img class="feedback__img" src="../img/contact/feedback-image.jpg" alt="">
+
+        <form class="feedback__form">
+            <div class="feedback__info">
+                <h2 class="feedback__title">
+                    Your Feedback Is Much Appreciated!
+                </h2>
+                <p class="feedback__text">
+                    We will contact you when you complete the following form!
+                </p>
+            </div>
+
+            <div class="feedback__field">
+                <label class="feedback__label" for="contact-name">Your Name *</label>
+                <input class="feedback__input" type="text" name="contact-name" id="contact-name" required>
+            </div>
+
+            <div class="feedback__field">
+                <label class="feedback__label" for="contact-mail">Your Email Address *</label>
+                <input class="feedback__input" type="email" name="contact-mail" id="contact-mail" required>
+            </div>
+
+            <div class="feedback__field"><label class="feedback__label" for="contact-topic">Topic *</label>
+                <input class="feedback__input" type="text" name="contact-topic" id="contact-topic" required>
+            </div>
+
+            <div class="feedback__field">
+                <label class="feedback__label" for="contact-message">Your Message *</label>
+                <textarea class="feedback__textarea" name="contact-message" id="contact-message" required></textarea>
+            </div>
+
+            <div class="feedback__actions">
+                <button class="feedback__btn btn" type="submit">Send</button>
+                <p class="feedback__message" hidden>
+
+                </p>
+            </div>
+        </form>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer__benefits">
+        <div class="container">
+            <h3 class="footer__benefits-title">Our Benefits</h3>
+            <ul class="footer__benefits-list">
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits1.svg" alt="">
+                    <p class="footer__benefits-text">Velit nisl sodales eget
+                        donec quis. volutpat orci.</p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits2.svg" alt="">
+                    <p class="footer__benefits-text">Dolor eu varius. Morbi
+                        fermentum velit nisl.</p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits3.svg" alt="">
+                    <p class="footer__benefits-text">Malesuada fames ac ante
+                        ipsum primis in faucibus. </p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits4.svg" alt="">
+                    <p class="footer__benefits-text">Nisl sodales eget donec
+                        quis. volutpat orci. </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer__main container">
+        <nav class="footer__main-info">
+            <div class="footer__column">
+                <h3 class="footer__column-title"><a class="footer__column-link" href="../html/about.html">About Us</a>
+                </h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Organisation</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Partners</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Clients</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Interesting Links</h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Photo Gallery</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Our Team</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Socials</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Achievements</h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Winning Awards</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Press</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Our Amazing Clients</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="footer__shipping">
+            <h3 class="footer__shipping-title">Shipping Information</h3>
+            <p class="footer__shipping-text">Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut
+                sit amet erat nec nibh
+                rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien,
+                vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam. </p>
+        </div>
+
+        <div class="footer__contacts">
+            <div class="footer__contacts-info">
+                <h3 class="footer__contacts-title"><a class="footer__contacts-link" href="../html/contact.html">Contact
+                    Us</a></h3>
+                <p class="footer__contacts-text">Bendum dolor eu varius. Morbi fermentum velitsodales
+                    egetonec. volutpat orci. Sed ipsum felis, tristique
+                    egestas et, convallis ac velitn consequat nec luctus.</p>
+            </div>
+            <address>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/phone.svg" alt="">
+                        <span>Phone: <a class="footer__contacts-link" href="tel:+632366322">(+63) 236 6322</a></span>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/mail.svg" alt="">
+                        <a class="footer__contacts-link" href="mailto:public@news.com">public@news.com</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/clock.svg" alt="">
+                        <span>Mon - Fri: 10am - 6pm <br> Sat - Sun: 10am - 6pm</span>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/location.svg" alt="">
+                        <span>639 Jade Valley, Washington Dc</span>
+                    </li>
+                </ul>
+            </address>
+
+        </div>
+    </div>
+
+    <p class="footer__copyright">© Copyright 2025</p>
+</footer>
+
+<script type="module" src="../../dist/js/main.js"></script>
+<script type="module" src="../../dist/js/contact.js"></script>
+</body>
+</html>

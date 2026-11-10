@@ -1,0 +1,234 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+.hero {
+    background-color: variables.$color-hero-bg;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        min-height: 860px;
+    }
+
+    &__img {
+        justify-self: end;
+    }
+
+    &__title {
+        @extend %section-title;
+        font-size: 50px;
+    }
+
+    &__text {
+        @extend %section-text;
+        margin-block: variables.$space-30px;
+    }
+}
+
+.promo {
+    margin-top: -100px;
+    margin-bottom: variables.$section-gap;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: variables.$color-white;
+
+        @extend %shadow-card;
+    }
+
+    &__quote {
+        margin: 75px;
+    }
+
+    &__author {
+        display: flex;
+        align-items: center;
+        gap: variables.$space-20px;
+    }
+
+    &__avatar {
+        max-width: 95px;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 20px;
+        margin-bottom: variables.$space-5px;
+    }
+
+    &__title {
+        @extend %section-title;
+        line-height: 1.2;
+        margin-block: variables.$space-30px;
+    }
+
+    &__text {
+        @extend %section-text;
+        margin-block: variables.$space-15px;
+    }
+
+    &__discount {
+        display: flex;
+        aspect-ratio: 646 / 566;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../../src/img/home/suitcases-main-banner.jpg");
+        background-size: cover;
+        padding: 70px;
+    }
+
+    &__discount-title {
+        @extend %section-title;
+        color: variables.$color-white;
+    }
+
+    &__discount-text {
+        @extend %section-text;
+        color: variables.$color-white;
+        margin-block: variables.$space-30px;
+    }
+}
+
+.travel {
+    margin-bottom: variables.$section-gap;
+
+    &__title {
+        @extend %section-heading;
+    }
+
+    &__text {
+        @extend %section-subheading;
+    }
+}
+
+.products {
+    margin-bottom: variables.$section-gap-lg;
+
+    &__title {
+        @extend %section-heading;
+    }
+
+    &__text {
+        @extend %section-subheading;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: variables.$space-40px;
+    }
+}
+
+.slider {
+    &__item {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 296 / 600;
+        transition: box-shadow 0.3s ease;
+
+        &:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(60%);
+        transition: transform 0.3s ease;
+
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: variables.$space-20px;
+        color: variables.$color-white;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: variables.$space-40px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 19px;
+        margin-inline: variables.$space-20px;
+    }
+
+    &__text {
+        font-size: 19px;
+        margin: variables.$space-20px;
+    }
+}
+
+.arrival {
+    margin-bottom: variables.$section-gap-lg;
+
+    &__title {
+        @extend %section-heading;
+    }
+
+    &__text {
+        @extend %section-subheading;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: variables.$space-40px;
+    }
+}
+
+.customers{
+    margin-bottom: variables.$section-gap-lg;
+
+    &__title {
+        @extend %section-heading;
+    }
+
+    &__text {
+        @extend %section-subheading ;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: variables.$space-20px;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 45px 40px;
+
+        @extend %shadow-card;
+    }
+
+    &__review{
+        margin-block: variables.$space-20px;
+        text-align: center;
+    }
+
+    &__location{
+        color: variables.$color-accent;
+        font-weight: 700;
+    }
+}

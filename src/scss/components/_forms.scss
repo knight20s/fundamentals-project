@@ -1,0 +1,100 @@
+@use "../abstracts/variables";
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$space-25px;
+
+    &__title {
+        font-weight: 700;
+        color: variables.$color-primary;
+    }
+
+    &__note,
+    &__rating,
+    &__checkbox {
+        font-size: variables.$font-size-small;
+    }
+
+    &__rating {
+        display: flex;
+        align-items: center;
+        gap: variables.$space-15px;
+    }
+
+    &__stars {
+        display: flex;
+        gap: variables.$space-5px;
+    }
+
+    &__textarea,
+    &__input {
+        width: 100%;
+        padding: variables.$space-12px variables.$space-15px;
+        border: 1px solid variables.$color-border;
+        background-color: variables.$color-white;
+        font-size: variables.$font-size-small;
+
+        &::placeholder {
+            color: variables.$color-muted;
+        }
+    }
+
+    &__textarea {
+        min-height: 170px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: variables.$space-20px;
+    }
+
+    &__checkbox {
+        display: flex;
+        align-items: center;
+        gap: variables.$space-15px;
+    }
+
+    &__checkbox-input {
+        accent-color: variables.$color-accent;
+    }
+
+    &__btn {
+        align-self: flex-start;
+        padding: variables.$space-12px variables.$space-20px;
+        font-size: variables.$font-size-small;
+    }
+}
+
+.select {
+    padding: variables.$space-12px;
+    border: 1px solid variables.$color-border;
+    background-color: variables.$color-white;
+
+    &:invalid {
+        color: variables.$color-muted;
+    }
+
+    option {
+        color: variables.$color-primary;
+    }
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: variables.$space-10px;
+    padding: variables.$space-10px variables.$space-15px;
+    border: 1px solid variables.$color-border;
+    background-color: variables.$color-white;
+
+    &__input {
+        flex-grow: 1;
+    }
+
+    &__btn {
+        display: flex;
+    }
+}
+

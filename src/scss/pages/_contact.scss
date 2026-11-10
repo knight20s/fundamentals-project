@@ -1,0 +1,81 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+.feedback {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: variables.$space-60px;
+    margin-bottom: variables.$section-gap-lg;
+
+    &__field{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 35px;
+    }
+
+    &__text {
+        margin-bottom: variables.$space-30px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$space-40px;
+    }
+
+    &__label {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    &__input {
+        border: 1px solid variables.$color-accent;
+        padding: 10px;
+
+
+        &:focus-visible {
+            outline: none;
+            border: 1px solid variables.$color-accent-hover;
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        border: 1px solid variables.$color-accent;
+        height: 120px;
+        padding: 10px;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__btn{
+        font-size: 12px;
+        padding: 13px 30px;
+        text-transform: uppercase;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__actions{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__message{
+        font-size: 20px;
+    }
+}
+

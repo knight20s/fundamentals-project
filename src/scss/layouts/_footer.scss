@@ -1,0 +1,127 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+%footer-title {
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.footer {
+    font-family: variables.$font-footer;
+    font-size: variables.$font-size-compact;
+
+    &__benefits {
+        background-color: variables.$color-secondary;
+        background-image: url('../../src/img/footer/vector-lines.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding-block: variables.$space-30px;
+        color: variables.$color-white;
+
+    }
+
+    &__benefits-title {
+        margin-bottom: variables.$space-30px;
+        font-family: variables.$font-accent;
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    &__benefits-list {
+        display: flex;
+        gap: 90px;
+    }
+
+    &__benefits-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    &__benefits-text {
+        line-height: 1.5;
+    }
+
+    &__main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+        "nav contacts"
+        "shipping contacts";
+        margin-block: variables.$section-gap-lg;
+    }
+
+    &__main-info {
+        grid-area: nav;
+        display: flex;
+        gap: 145px;
+        margin-bottom: 50px;
+    }
+
+    &__shipping {
+        grid-area: shipping;
+    }
+
+    &__shipping-title {
+        @extend %footer-title;
+    }
+
+    &__shipping-text {
+        max-width: 611px;
+        line-height: 1.5;
+    }
+
+    &__contacts {
+        grid-area: contacts;
+    }
+
+    &__contacts-text {
+        line-height: 1.5;
+    }
+
+    &__contacts-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-top: 70px;
+        line-height: 1.5;
+    }
+
+    &__contacts-title {
+        @extend %footer-title;
+    }
+
+    &__contacts-item {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    &__column-title {
+        @extend %footer-title;
+    }
+
+    &__column-list {
+        flex-direction: column;
+        display: flex;
+        gap: 12px;
+    }
+
+    &__copyright {
+        text-align: center;
+        margin-bottom: 55px;
+        opacity: 35%;
+        font-size: 14px;
+        font-family: variables.$font-accent;
+    }
+
+    a {
+        transition: 0.3s ease;
+
+        &:hover {
+            color: variables.$color-accent;
+        }
+    }
+}
+

@@ -1,0 +1,146 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+$sidebar-width: 350px;
+
+.catalog {
+    margin-bottom: variables.$section-gap;
+    display: grid;
+    grid-template-columns: 1fr $sidebar-width;
+    gap: variables.$space-50px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: variables.$space-40px variables.$space-10px;
+    }
+
+    &__pagination {
+        margin-top: variables.$space-60px;
+    }
+}
+
+.catalog-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: variables.$space-45px;
+
+    &__results {
+        font-size: variables.$font-size-medium;
+        color: variables.$color-secondary;
+    }
+
+    &__select {
+        padding: variables.$space-10px variables.$space-15px;
+    }
+}
+
+.search-form {
+    transition: border-color 0.3s ease;
+
+    &:focus-within {
+        border-color: variables.$color-accent;
+    }
+
+    &__input {
+        &:focus-visible {
+            outline: none;
+        }
+    }
+}
+
+.top-sets {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: variables.$space-25px;
+    }
+
+    &__search {
+        margin-bottom: variables.$space-45px;
+    }
+
+    &__title {
+        font-size: variables.$font-size-compact;
+        font-weight: 700;
+        margin-bottom: variables.$space-20px;
+    }
+
+    &__item {
+        display: flex;
+        gap: variables.$space-20px;
+    }
+
+    &__product {
+        width: 87px;
+        height: 87px;
+        flex-shrink: 0;
+
+        @extend %shadow-card;
+    }
+
+    &__stars {
+        margin-top: variables.$space-10px;
+    }
+
+    &__star {
+        width: 12px;
+    }
+
+    &__price {
+        font-size: variables.$font-size-compact;
+    }
+}
+
+.filter {
+    margin-bottom: variables.$space-60px;
+
+    &__types {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: variables.$space-25px;
+        padding-bottom: 35px;
+        padding-top: variables.$space-20px;
+        border-bottom: 2px solid variables.$color-accent;
+        border-top: 2px solid variables.$color-accent;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-weight: 700;
+        margin-bottom: 13px;
+    }
+
+    &__checkbox {
+        align-self: flex-start;
+        margin-block: auto;
+        appearance: none;
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+        border: 4px solid variables.$color-checkbox-outline;
+        background-color: variables.$color-white;
+        transition: background-color 0.25s;
+
+        &:checked {
+            background-color: variables.$color-accent;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: variables.$space-20px;
+        margin-top: variables.$space-60px;
+    }
+
+    &__buttons-btn {
+        padding: variables.$space-20px variables.$space-50px;
+        text-transform: uppercase;
+    }
+}
+

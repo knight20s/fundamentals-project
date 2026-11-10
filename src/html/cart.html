@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/main.css">
+    <link rel="icon" href="../img/icons/icon.svg" type="image/svg+xml">
+    <title>Cart | Best Shop</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__top">
+            <ul class="header__social">
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/twitter.svg" alt="twitter">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/instagram.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+
+            <a class="header__logo" href="../index.html"><img class="header__logo-icon" src="../img/icons/logo.png"
+                                                              alt=""><span
+                    class="header__logo-text">Best Shop</span></a>
+
+            <div class="header__actions">
+                <button class="header__actions-btn" type="button"><img src="../img/icons/user.svg" alt="account">
+                </button>
+                <a class="header__actions-link" href="../html/cart.html" aria-current="page"><img
+                        src="../img/icons/cart.svg" alt="cart"></a>
+            </div>
+        </div>
+
+        <div class="header__bottom">
+            <nav class="header__bottom-nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a class="header__menu-link" href="../index.html"
+                    >Home</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/catalog.html">Catalog<img
+                            src="../img/icons/arrow.svg" alt=""></a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/about.html">About Us</a>
+                    </li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/contact.html">Contact
+                        Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="cart-hero">
+        <img class="cart-hero__bg" src="../img/cart/banner-image.jpg" alt="">
+        <h1 class="cart-hero__title">
+            My Cart
+        </h1>
+    </section>
+
+    <section class="cart-items container">
+        <table class="cart-table">
+            <thead>
+            <tr class="cart-table__head">
+                <th class="cart-table__th" scope="col">Image</th>
+                <th class="cart-table__th" scope="col">Product Name</th>
+                <th class="cart-table__th" scope="col">Price</th>
+                <th class="cart-table__th" scope="col">Quantity</th>
+                <th class="cart-table__th" scope="col">Total</th>
+                <th class="cart-table__th" scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="cart-table__row">
+                <td class="cart-table__cell cart-table__image">
+                    <img class="cart-table__img" src="../img/cart/suitcase-dark-blue.png" alt="">
+                </td>
+                <td class="cart-table__cell cart-table__name">Nomad Haven</td>
+                <td class="cart-table__cell cart-table__price">$250</td>
+                <td class="cart-table__cell cart-table__quantity">
+                    <div class="cart-table__counter">
+                        <button class="cart-table__counter-btn" type="button" aria-label="Decrease quantity">-</button>
+                        <span class="cart-table__value">1</span>
+                        <button class="cart-table__counter-btn" type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                </td>
+                <td class="cart-table__cell cart-table__total">$250</td>
+                <td class="cart-table__cell">
+                    <button class="cart-table__delete" type="button" aria-label="Remove Nomad Haven">
+                        <img class="cart-table__bin" src="../img/icons/bin.svg" alt="">
+                    </button>
+                </td>
+            </tr>
+            <tr class="cart-table__row">
+                <td class="cart-table__cell cart-table__image">
+                    <img class="cart-table__img" src="../img/cart/suitcase-dark-blue.png" alt="">
+                </td>
+                <td class="cart-table__cell cart-table__name">Nomad Haven</td>
+                <td class="cart-table__cell cart-table__price">$250</td>
+                <td class="cart-table__cell cart-table__quantity">
+                    <div class="cart-table__counter">
+                        <button class="cart-table__counter-btn" type="button" aria-label="Decrease quantity">-</button>
+                        <span class="cart-table__value">1</span>
+                        <button class="cart-table__counter-btn" type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                </td>
+                <td class="cart-table__cell cart-table__total">$250</td>
+                <td class="cart-table__cell">
+                    <button class="cart-table__delete" type="button" aria-label="Remove Nomad Haven">
+                        <img class="cart-table__bin" src="../img/icons/bin.svg" alt="">
+                    </button>
+                </td>
+            </tr>
+            <tr class="cart-table__row">
+                <td class="cart-table__cell cart-table__image">
+                    <img class="cart-table__img" src="../img/cart/suitcase-dark-blue.png" alt="">
+                </td>
+                <td class="cart-table__cell cart-table__name">Nomad Haven</td>
+                <td class="cart-table__cell cart-table__price">$250</td>
+                <td class="cart-table__cell cart-table__quantity">
+                    <div class="cart-table__counter">
+                        <button class="cart-table__counter-btn" type="button" aria-label="Decrease quantity">-</button>
+                        <span class="cart-table__value">1</span>
+                        <button class="cart-table__counter-btn" type="button" aria-label="Increase quantity">+</button>
+                    </div>
+                </td>
+                <td class="cart-table__cell cart-table__total">$250</td>
+                <td class="cart-table__cell">
+                    <button class="cart-table__delete" type="button" aria-label="Remove Nomad Haven">
+                        <img class="cart-table__bin" src="../img/icons/bin.svg" alt="">
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-items__footer">
+            <div class="cart-items__actions">
+                <a href="./catalog.html" class="cart-items__btn btn">
+                    Continue Shopping
+                </a>
+                <button class="cart-items__btn btn" type="button">Clear Shopping Cart</button>
+            </div>
+
+            <div class="cart-summary">
+                <dl class="cart-summary__list">
+                    <div class="cart-summary__row">
+                        <dt class="cart-summary__label">Sub Total</dt>
+                        <dd class="cart-summary__value">$2140</dd>
+                    </div>
+                    <div class="cart-summary__row">
+                        <dt class="cart-summary__label">Shipping</dt>
+                        <dd class="cart-summary__value">$30</dd>
+                    </div>
+                    <div class="cart-summary__row" hidden>
+                        <dt class="cart-summary__label">Discount</dt>
+                        <dd class="cart-summary__value">-$130</dd>
+                    </div>
+                    <div class="cart-summary__row cart-summary__row--total">
+                        <dt class="cart-summary__label">Total</dt>
+                        <dd class="cart-summary__value">$1130</dd>
+                    </div>
+                </dl>
+                <button class="cart-summary__btn btn" type="button">Checkout</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__benefits">
+        <div class="container">
+            <h3 class="footer__benefits-title">Our Benefits</h3>
+            <ul class="footer__benefits-list">
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits1.svg" alt="">
+                    <p class="footer__benefits-text">Velit nisl sodales eget
+                        donec quis. volutpat orci.</p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits2.svg" alt="">
+                    <p class="footer__benefits-text">Dolor eu varius. Morbi
+                        fermentum velit nisl.</p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits3.svg" alt="">
+                    <p class="footer__benefits-text">Malesuada fames ac ante
+                        ipsum primis in faucibus. </p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits4.svg" alt="">
+                    <p class="footer__benefits-text">Nisl sodales eget donec
+                        quis. volutpat orci. </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer__main container">
+        <nav class="footer__main-info">
+            <div class="footer__column">
+                <h3 class="footer__column-title"><a class="footer__column-link" href="../html/about.html">About Us</a>
+                </h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Organisation</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Partners</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Clients</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Interesting Links</h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Photo Gallery</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Our Team</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Socials</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Achievements</h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Winning Awards</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Press</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Our Amazing Clients</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="footer__shipping">
+            <h3 class="footer__shipping-title">Shipping Information</h3>
+            <p class="footer__shipping-text">Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut
+                sit amet erat nec nibh
+                rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien,
+                vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam. </p>
+        </div>
+
+        <div class="footer__contacts">
+            <div class="footer__contacts-info">
+                <h3 class="footer__contacts-title"><a class="footer__contacts-link" href="../html/contact.html">Contact
+                    Us</a></h3>
+                <p class="footer__contacts-text">Bendum dolor eu varius. Morbi fermentum velitsodales
+                    egetonec. volutpat orci. Sed ipsum felis, tristique
+                    egestas et, convallis ac velitn consequat nec luctus.</p>
+            </div>
+            <address>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/phone.svg" alt="">
+                        <span>Phone: <a class="footer__contacts-link" href="tel:+632366322">(+63) 236 6322</a></span>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/mail.svg" alt="">
+                        <a class="footer__contacts-link" href="mailto:public@news.com">public@news.com</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/clock.svg" alt="">
+                        <span>Mon - Fri: 10am - 6pm <br> Sat - Sun: 10am - 6pm</span>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/location.svg" alt="">
+                        <span>639 Jade Valley, Washington Dc</span>
+                    </li>
+                </ul>
+            </address>
+
+        </div>
+    </div>
+
+    <p class="footer__copyright">© Copyright 2025</p>
+</footer>
+
+<script type="module" src="../../dist/js/main.js"></script>
+<script type="module" src="../../dist/js/cart.js"></script>
+</body>
+</html>

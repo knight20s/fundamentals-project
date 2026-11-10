@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/main.css">
+    <link rel="icon" href="../img/icons/icon.svg" type="image/svg+xml">
+    <title>Catalog | Best Shop</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__top">
+            <ul class="header__social">
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/twitter.svg" alt="twitter">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/instagram.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
+
+            <a class="header__logo" href="../index.html"><img class="header__logo-icon" src="../img/icons/logo.png"
+                                                              alt=""><span
+                    class="header__logo-text">Best Shop</span></a>
+
+            <div class="header__actions">
+                <button class="header__actions-btn" type="button"><img src="../img/icons/user.svg" alt="account">
+                </button>
+                <a class="header__actions-link" href="../html/cart.html"><img src="../img/icons/cart.svg"
+                                                                              alt="cart"></a>
+            </div>
+        </div>
+
+        <div class="header__bottom">
+            <nav class="header__bottom-nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a class="header__menu-link" href="../index.html"
+                    >Home</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link header__menu-link--active"
+                                                     href="../html/catalog.html" aria-current="page">Catalog<img
+                            src="../img/icons/arrow.svg" alt=""></a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/about.html">About Us</a>
+                    </li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/contact.html">Contact
+                        Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <h1 class="visually-hidden">Catalog</h1>
+    <section class="filter container">
+        <h2 class="visually-hidden">Filters</h2>
+        <form class="filter__form">
+            <div class="filter__types">
+                <div class="filter__field">
+                    <label class="filter__label" for="filter-size">Size</label>
+                    <select class="filter__select select" id="filter-size" name="size" required>
+                        <option value="">Choose option</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+
+                <div class="filter__field">
+                    <label class="filter__label" for="filter-color">Color</label>
+                    <select class="filter__select select" id="filter-color" name="color" required>
+                        <option value="">Choose option</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="grey">Grey</option>
+                        <option value="black">Black</option>
+                        <option value="red">Red</option>
+                        <option value="pink">Pink</option>
+                        <option value="yellow">Yellow</option>
+                    </select>
+                </div>
+
+                <div class="filter__field">
+                    <label class="filter__label" for="filter-category">Category</label>
+                    <select class="filter__select select" id="filter-category" name="category" required>
+                        <option value="">Choose option</option>
+                        <option value="suitcases">Suitcases</option>
+                        <option value="kids' luggage">Kids' luggage</option>
+                        <option value="luggage sets">Luggage sets</option>
+                        <option value="carry-ons">Carry-ons</option>
+                    </select>
+                </div>
+
+                <div class="filter__field">
+                    <label class="filter__label" for="filter-sales">Sales</label>
+                    <input class="filter__checkbox" type="checkbox" name="sales" id="filter-sales" value="true">
+                </div>
+            </div>
+
+            <div class="filter__buttons">
+                <button class="filter__buttons-btn btn" type="reset">Clear Filter</button>
+                <button class="filter__buttons-btn btn" type="button">Hide Filter</button>
+            </div>
+        </form>
+    </section>
+
+    <section class="catalog container">
+        <div class="catalog__content">
+            <div class="catalog-toolbar">
+                <p class="catalog-toolbar__results">Showing 1-12 Of 15 Results</p>
+
+                <select class="catalog-toolbar__select select" id="sort" name="sort" aria-label="Sort products">
+                    <option value="default">Default Sorting</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="popularity">Popularity</option>
+                    <option value="rating">Rating</option>
+                </select>
+            </div>
+
+            <ul class="catalog__list">
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/suitcase-green-1.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/suitcase-blue-1.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/suitcase-grey.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/suitcase-orange.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/suitcase-yellow.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/suitcase-red-1.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/suitcase-black.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/suitcase-brown.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/kid-suitcase-2.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/kid-suitcase-5.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/kid-suitcase-3.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+                <li class="catalog__item products-card">
+                    <a class="products-card__link" href="../html/product.html">
+                        <img class="products-card__img" src="../img/catalog/kid-suitcase-4.png" alt="Black suitcase">
+                        <span class="products-card__badge">sale</span>
+                        <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                        <p class="products-card__price">$250</p>
+                    </a>
+                    <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+                </li>
+            </ul>
+
+            <nav class="catalog__pagination pagination" aria-label="Catalog pages">
+                <button class="pagination__btn pagination__btn--prev" type="button" hidden>
+                    <img class="pagination__arrow pagination__arrow--prev" src="../img/icons/arrow.svg" alt="">
+                    Prev
+                </button>
+
+                <ul class="pagination__list">
+                    <li class="pagination__item">
+                        <button class="pagination__page pagination__page--active" type="button" aria-label="Page 1"
+                                aria-current="page">1
+                        </button>
+                    </li>
+                    <li class="pagination__item">
+                        <button class="pagination__page" type="button" aria-label="Page 2">2</button>
+                    </li>
+                </ul>
+
+                <button class="pagination__btn pagination__btn--next" type="button">
+                    Next
+                    <img class="pagination__arrow pagination__arrow--next" src="../img/icons/arrow.svg" alt="">
+                </button>
+            </nav>
+        </div>
+
+        <aside class="catalog__aside top-sets">
+            <search>
+                <form class="top-sets__search search-form" method="get">
+                    <input class="search-form__input" type="search" name="search" placeholder="Search Models"
+                           aria-label="Search models">
+                    <button class="search-form__btn" type="submit" aria-label="Search product">
+                        <img class="search-form__icon" src="../img/icons/search.svg" alt="">
+                    </button>
+                </form>
+            </search>
+
+            <h2 class="top-sets__title">
+                Top Best Sets
+            </h2>
+            <ul class="top-sets__list">
+                <li class="top-sets__item">
+                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-red-small.png" alt="">
+                    <div class="top-sets__info">
+                        <p class="top-sets__text">
+                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
+                        </p>
+                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                        </div>
+                        <p class="top-sets__price">
+                            $1000
+                        </p>
+                    </div>
+                </li>
+
+                <li class="top-sets__item">
+                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-black-small.png" alt="">
+                    <div class="top-sets__info">
+                        <p class="top-sets__text">
+                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
+                        </p>
+                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                        </div>
+                        <p class="top-sets__price">
+                            $1200
+                        </p>
+                    </div>
+                </li>
+
+                <li class="top-sets__item">
+                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-blue-small.png" alt="">
+                    <div class="top-sets__info">
+                        <p class="top-sets__text">
+                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
+                        </p>
+                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star-muted.svg" alt="">
+                        </div>
+                        <p class="top-sets__price">
+                            $2100
+                        </p>
+                    </div>
+                </li>
+
+                <li class="top-sets__item">
+                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-yellow-small.png" alt="">
+                    <div class="top-sets__info">
+                        <p class="top-sets__text">
+                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
+                        </p>
+                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star-muted.svg" alt="">
+                        </div>
+                        <p class="top-sets__price">
+                            $1500
+                        </p>
+                    </div>
+                </li>
+
+                <li class="top-sets__item">
+                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-green-small.png" alt="">
+                    <div class="top-sets__info">
+                        <p class="top-sets__text">
+                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
+                        </p>
+                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
+                            <img class="top-sets__star" src="../img/icons/star-muted.svg" alt="">
+                        </div>
+                        <p class="top-sets__price">
+                            $1100
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </aside>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__benefits">
+        <div class="container">
+            <h3 class="footer__benefits-title">Our Benefits</h3>
+            <ul class="footer__benefits-list">
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits1.svg" alt="">
+                    <p class="footer__benefits-text">Velit nisl sodales eget
+                        donec quis. volutpat orci.</p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits2.svg" alt="">
+                    <p class="footer__benefits-text">Dolor eu varius. Morbi
+                        fermentum velit nisl.</p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits3.svg" alt="">
+                    <p class="footer__benefits-text">Malesuada fames ac ante
+                        ipsum primis in faucibus. </p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits4.svg" alt="">
+                    <p class="footer__benefits-text">Nisl sodales eget donec
+                        quis. volutpat orci. </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer__main container">
+        <nav class="footer__main-info">
+            <div class="footer__column">
+                <h3 class="footer__column-title"><a class="footer__column-link" href="../html/about.html">About Us</a>
+                </h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Organisation</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Partners</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Clients</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Interesting Links</h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Photo Gallery</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Our Team</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Socials</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Achievements</h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Winning Awards</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Press</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Our Amazing Clients</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="footer__shipping">
+            <h3 class="footer__shipping-title">Shipping Information</h3>
+            <p class="footer__shipping-text">Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut
+                sit amet erat nec nibh
+                rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien,
+                vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam. </p>
+        </div>
+
+        <div class="footer__contacts">
+            <div class="footer__contacts-info">
+                <h3 class="footer__contacts-title"><a class="footer__contacts-link" href="../html/contact.html">Contact
+                    Us</a></h3>
+                <p class="footer__contacts-text">Bendum dolor eu varius. Morbi fermentum velitsodales
+                    egetonec. volutpat orci. Sed ipsum felis, tristique
+                    egestas et, convallis ac velitn consequat nec luctus.</p>
+            </div>
+            <address>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/phone.svg" alt="">
+                        <span>Phone: <a class="footer__contacts-link" href="tel:+632366322">(+63) 236 6322</a></span>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/mail.svg" alt="">
+                        <a class="footer__contacts-link" href="mailto:public@news.com">public@news.com</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/clock.svg" alt="">
+                        <span>Mon - Fri: 10am - 6pm <br> Sat - Sun: 10am - 6pm</span>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/location.svg" alt="">
+                        <span>639 Jade Valley, Washington Dc</span>
+                    </li>
+                </ul>
+            </address>
+
+        </div>
+    </div>
+
+    <p class="footer__copyright">© Copyright 2025</p>
+</footer>
+
+<script type="module" src="../../dist/js/main.js"></script>
+<script type="module" src="../../dist/js/catalog.js"></script>
+</body>
+</html>

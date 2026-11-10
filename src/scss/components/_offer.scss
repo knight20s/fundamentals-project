@@ -1,0 +1,47 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+.offer {
+    margin-bottom: variables.$section-gap-lg;
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        url("../../src/img/home/offer-of-the-month-image.jpg");
+        background-size: cover;
+        background-position: center;
+        aspect-ratio: 1300 / 407;
+        color: variables.$color-white;
+    }
+
+    &__sale {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__discount {
+        font-size: 225px;
+        font-weight: 900;
+    }
+
+    &__note {
+        font-size: 20px;
+    }
+
+    &__info {
+        margin-inline: 110px;
+    }
+
+    &__title {
+        @extend %section-title;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-block: variables.$space-30px;
+    }
+}

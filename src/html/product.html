@@ -1,10 +1,440 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../dist/css/main.css">
+    <link rel="icon" href="../img/icons/icon.svg" type="image/svg+xml">
+    <title>Products | Best Shop</title>
 </head>
 <body>
+<header class="header">
+    <div class="container">
+        <div class="header__top">
+            <ul class="header__social">
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/facebook.svg" alt="facebook">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/twitter.svg" alt="twitter">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a class="header__social-link" href="#!">
+                        <img src="../img/social/instagram.svg" alt="instagram">
+                    </a>
+                </li>
+            </ul>
 
+            <a class="header__logo" href="../index.html"><img class="header__logo-icon" src="../img/icons/logo.png"
+                                                              alt=""><span
+                    class="header__logo-text">Best Shop</span></a>
+
+            <div class="header__actions">
+                <button class="header__actions-btn" type="button"><img src="../img/icons/user.svg" alt="account">
+                </button>
+                <a class="header__actions-link" href="../html/cart.html"><img src="../img/icons/cart.svg"
+                                                                              alt="cart"></a>
+            </div>
+        </div>
+
+        <div class="header__bottom">
+            <nav class="header__bottom-nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item"><a class="header__menu-link" href="../index.html"
+                    >Home</a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/catalog.html">Catalog<img
+                            src="../img/icons/arrow.svg" alt=""></a></li>
+                    <li class="header__menu-item"><a class="header__menu-link" href="../html/about.html">About Us</a>
+                    </li>
+                    <li class="header__menu-item"><a class="header__menu-link"
+                                                     href="../html/contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+    <section class="product container">
+        <div class="product__gallery">
+            <img class="product__img" src="../img/product/suitcase-yellow.png"
+                 alt="Global Explorer Max Comfort Suitcase Pro">
+            <ul class="product__thumbs">
+                <li class="product__thumb">
+                    <img class="product__thumb-img" src="../img/product/suitcase-small-card-1.png"
+                         alt="Global Explorer Max Comfort Suitcase Pro, view 2">
+                </li>
+                <li class="product__thumb">
+                    <img class="product__thumb-img" src="../img/product/suitcase-small-4.png"
+                         alt="Global Explorer Max Comfort Suitcase Pro, view 3">
+                </li>
+                <li class="product__thumb">
+                    <img class="product__thumb-img" src="../img/product/suitcase-small-2.png"
+                         alt="Global Explorer Max Comfort Suitcase Pro, view 4">
+                </li>
+                <li class="product__thumb">
+                    <img class="product__thumb-img" src="../img/product/yellow-open1.png"
+                         alt="Global Explorer Max Comfort Suitcase Pro, view 5">
+                </li>
+            </ul>
+        </div>
+        <div class="product__info">
+            <h1 class="product__title">Global Explorer Max Comfort
+                Suitcase Pro
+            </h1>
+
+            <div class="product__rating">
+                <div class="product__rating-stars" role="img" aria-label="Rating: 5 out of 5">
+                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
+                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
+                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
+                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
+                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
+                </div>
+
+                <p class="product__rating-count">(1 Clients Review)</p>
+            </div>
+
+            <p class="product__price">$250</p>
+
+            <div class="product__description">
+                <p class="product__description-text">
+                    The new Global Explorer Max Comfort Suitcase Pro is a bold reimagining of
+                    travel essentials, designed to elevate every journey. Made with at least 30%
+                    recycled materials, its lightweight yet impact-resistant shell combines eco-conscious innovation
+                    with
+                    rugged durability.
+                </p>
+                <p class="product__description-text">
+                    The ergonomic handle and GlideMotion spinner wheels ensure effortless
+                    mobility while making a statement in sleek design. Inside, the modular
+                    compartments and adjustable straps keep your belongings secure and
+                    neatly organized, no matter the destination.
+                </p>
+            </div>
+
+            <div class="product__options">
+                <div class="product__field">
+                    <label class="product__label" for="size">Size</label>
+                    <select class="product__select select" id="size" name="size" required>
+                        <option value="" hidden>Choose option</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+
+                <div class="product__field">
+                    <label class="product__label" for="color">Color</label>
+                    <select class="product__select select" id="color" name="color" required>
+                        <option value="" hidden>Choose option</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                        <option value="grey">Grey</option>
+                        <option value="black">Black</option>
+                        <option value="red">Red</option>
+                        <option value="pink">Pink</option>
+                        <option value="yellow">Yellow</option>
+                    </select>
+                </div>
+
+                <div class="product__field">
+                    <label class="product__label" for="category">Category</label>
+                    <select class="product__select select" id="category" name="category" required>
+                        <option value="" hidden>Choose option</option>
+                        <option value="suitcases">Suitcases</option>
+                        <option value="kids' luggage">Kids' luggage</option>
+                        <option value="luggage sets">Luggage sets</option>
+                        <option value="carry-ons">Carry-ons</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product__actions">
+                <div class="product__quantity">
+                    <button class="product__quantity-btn" type="button" aria-label="Decrease quantity">-</button>
+                    <span class="product__quantity-value">1</span>
+                    <button class="product__quantity-btn" type="button" aria-label="Increase quantity">+</button>
+                </div>
+                <button class="product__btn btn" type="button">Add To Cart</button>
+            </div>
+
+            <div class="product__payment">
+                <p class="product__payment-title">Payment:</p>
+
+                <ul class="product__payment-list">
+                    <li class="product__payment-item">
+                        <img class="product__payment-img" src="../img/payment/visa-pay-logo.png" alt="Visa">
+                    </li>
+                    <li class="product__payment-item">
+                        <img class="product__payment-img" src="../img/payment/american-express-logo.png"
+                             alt="American Express">
+                    </li>
+                    <li class="product__payment-item">
+                        <img class="product__payment-img" src="../img/payment/master-card-logo.png" alt="Mastercard">
+                    </li>
+                    <li class="product__payment-item">
+                        <img class="product__payment-img" src="../img/payment/paypal-logo.png" alt="PayPal">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-tabs container">
+        <div class="product-tabs__nav">
+            <button class="product-tabs__btn" type="button">Details</button>
+            <button class="product-tabs__btn product-tabs__btn--active" type="button">Reviews</button>
+            <button class="product-tabs__btn" type="button">Shipping Policy</button>
+        </div>
+
+        <div class="product-tabs__panel">
+            <p class="product-tabs__text">
+                Vestibulum commodo sapien non elit porttitor, vitae volutpat nibh mollis. Nulla porta risus id neque
+                tempor, in efficitur justo imperdiet. Etiam a ex at
+                ante tincidunt imperdiet. Nunc congue ex vel nisl viverra, sit amet aliquet lectus ullamcorper. Praesent
+                luctus lacus non lorem elementum, eu tristique
+                sapien suscipit. Sed bibendum, ipsum nec viverra malesuada, erat nisi sodales purus, eget hendrerit dui
+                ligula eu enim. Ut non est nisi. Pellentesque
+                tristique pretium dolor eu commodo. Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget
+                urna sit amet luctus. Suspendisse potenti.
+                Curabitur ac placerat est, sit amet sodales risus. Pellentesque viverra dui auctor, ullamcorper turpis
+                pharetra, facilisis quam.
+            </p>
+            <p class="product-tabs__text">
+                Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet luctus. Suspendisse
+                potenti. Curabitur ac placerat est, sit amet sodales
+                risus. Pellentesque viverra dui auctor, ullamcorper turpis pharetra, facilisis quam. Proin iaculis nibh
+                vitae lectus mollis bibendum.
+            </p>
+            <p class="product-tabs__text">
+                Quisque varius eget urna sit amet luctus. Suspendisse potenti. Curabitur ac placerat est, sit amet
+                sodales risus. Pellentesque viverra dui auctor,
+                ullamcorper turpis pharetra, facilisis quam.
+            </p>
+        </div>
+
+        <div class="product-tabs__panel" hidden>
+            <div class="product-reviews">
+                <div class="product-reviews__list-box">
+                    <h2 class="product-reviews__title">1 review for Global Explorer Max Comfort Suitcase Pro</h2>
+                    <ul class="product-reviews__list">
+                        <li class="review">
+                            <img class="review__avatar" src="../img/icons/user.svg" alt="">
+                            <div class="review__body">
+                                <div class="review__header">
+                                    <p class="review__name">John Smith</p>
+                                    <time class="review__date" datetime="2024-06-05">June 05, 2024</time>
+                                    <div class="review__stars" role="img" aria-label="Rating: 5 out of 5">
+                                        <img class="review__star" src="../img/icons/star.svg" alt="">
+                                        <img class="review__star" src="../img/icons/star.svg" alt="">
+                                        <img class="review__star" src="../img/icons/star.svg" alt="">
+                                        <img class="review__star" src="../img/icons/star.svg" alt="">
+                                        <img class="review__star" src="../img/icons/star.svg" alt="">
+                                    </div>
+                                </div>
+                                <p class="review__text">
+                                    Proin iaculis nibh vitae lectus mollis bibendum. Quisque varius eget urna sit amet luctus.
+                                    Suspendisse potenti curabitur ac placerat est, sit amet sodales risus.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="review-form">
+                    <h2 class="review-form__title">Add a review</h2>
+                    <p class="review-form__note">Your email address won’t be shared with anybody. Required fields have the symbol *</p>
+
+                    <div class="review-form__rating">
+                        <p class="review-form__rating-label">Rate product</p>
+                        <div class="review-form__stars">
+                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
+                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
+                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
+                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
+                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
+                        </div>
+                    </div>
+
+                    <textarea class="review-form__textarea" name="review" placeholder="Your review*" aria-label="Your review"
+                              required></textarea>
+
+                    <div class="review-form__row">
+                        <input class="review-form__input" type="text" name="name" placeholder="Your name*" aria-label="Your name"
+                               required>
+                        <input class="review-form__input" type="email" name="email" placeholder="Your email*"
+                               aria-label="Your email" required>
+                    </div>
+
+                    <label class="review-form__checkbox">
+                        <input class="review-form__checkbox-input" type="checkbox" name="save">
+                        Save my name, email, and website in this browser for when I leave another comment.                    </label>
+
+                    <button class="review-form__btn btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="product-tabs__panel" hidden>
+            <p class="product-tabs__text">
+                Sed bibendum, ipsum nec viverra malesuada, erat nisi sodales purus, eget hendrerit dui ligula eu enim.
+                Ut non est nisi. Pellentesque tristique pretium dolor eu commodo. Proin iaculis nibh vitae lectus mollis
+                bibendum. Quisque varius eget urna sit amet luctus.
+            </p>
+        </div>
+    </section>
+
+    <section class="related-products container">
+        <h2 class="related-products__title">You May Also Like</h2>
+
+        <ul class="related-products__list">
+            <li class="related-products__item products-card">
+                <a class="products-card__link" href="../html/product.html">
+                    <img class="products-card__img" src="../img/catalog/suitcase-black.png" alt="Black suitcase">
+                    <span class="products-card__badge">sale</span>
+                    <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                    <p class="products-card__price">$250</p>
+                </a>
+                <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+            </li>
+            <li class="related-products__item products-card">
+                <a class="products-card__link" href="../html/product.html">
+                    <img class="products-card__img" src="../img/home/suitcase-blue-2.jpg" alt="Blue suitcase">
+                    <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                    <p class="products-card__price">$250</p>
+                </a>
+                <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+            </li>
+            <li class="related-products__item products-card">
+                <a class="products-card__link" href="../html/product.html">
+                    <img class="products-card__img" src="../img/catalog/suitcase-red-1.png" alt="Red suitcase">
+                    <span class="products-card__badge">sale</span>
+                    <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                    <p class="products-card__price">$250</p>
+                </a>
+                <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+            </li>
+            <li class="related-products__item products-card">
+                <a class="products-card__link" href="../html/product.html">
+                    <img class="products-card__img" src="../img/catalog/suitcase-orange.png" alt="Orange suitcase">
+                    <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
+                    <p class="products-card__price">$250</p>
+                </a>
+                <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__benefits">
+        <div class="container">
+            <h3 class="footer__benefits-title">Our Benefits</h3>
+            <ul class="footer__benefits-list">
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits1.svg" alt="">
+                    <p class="footer__benefits-text">Velit nisl sodales eget
+                        donec quis. volutpat orci.</p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits2.svg" alt="">
+                    <p class="footer__benefits-text">Dolor eu varius. Morbi
+                        fermentum velit nisl.</p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits3.svg" alt="">
+                    <p class="footer__benefits-text">Malesuada fames ac ante
+                        ipsum primis in faucibus. </p>
+                </li>
+                <li class="footer__benefits-item">
+                    <img src="../img/footer/benefits4.svg" alt="">
+                    <p class="footer__benefits-text">Nisl sodales eget donec
+                        quis. volutpat orci. </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer__main container">
+        <nav class="footer__main-info">
+            <div class="footer__column">
+                <h3 class="footer__column-title"><a class="footer__column-link" href="../html/about.html">About Us</a>
+                </h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Organisation</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Partners</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Clients</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Interesting Links</h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Photo Gallery</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Our Team</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Socials</a></li>
+                </ul>
+            </div>
+            <div class="footer__column">
+                <h3 class="footer__column-title">Achievements</h3>
+                <ul class="footer__column-list">
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Winning Awards</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Press</a></li>
+                    <li class="footer__column-item"><a class="footer__column-link" href="#!">Our Amazing Clients</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="footer__shipping">
+            <h3 class="footer__shipping-title">Shipping Information</h3>
+            <p class="footer__shipping-text">Nulla eleifend pulvinar purus, molestie euismod odio imperdiet ac. Ut
+                sit amet erat nec nibh
+                rhoncus varius in non lorem. Donec interdum, lectus in convallis pulvinar, enim elit porta sapien,
+                vel finibus erat felis sed neque. Etiam aliquet neque sagittis erat tincidunt aliquam. </p>
+        </div>
+
+        <div class="footer__contacts">
+            <div class="footer__contacts-info">
+                <h3 class="footer__contacts-title"><a class="footer__contacts-link" href="../html/contact.html">Contact
+                    Us</a></h3>
+                <p class="footer__contacts-text">Bendum dolor eu varius. Morbi fermentum velitsodales
+                    egetonec. volutpat orci. Sed ipsum felis, tristique
+                    egestas et, convallis ac velitn consequat nec luctus.</p>
+            </div>
+            <address>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/phone.svg" alt="">
+                        <span>Phone: <a class="footer__contacts-link" href="tel:+632366322">(+63) 236 6322</a></span>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/mail.svg" alt="">
+                        <a class="footer__contacts-link" href="mailto:public@news.com">public@news.com</a>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/clock.svg" alt="">
+                        <span>Mon - Fri: 10am - 6pm <br> Sat - Sun: 10am - 6pm</span>
+                    </li>
+                    <li class="footer__contacts-item">
+                        <img src="../img/footer/location.svg" alt="">
+                        <span>639 Jade Valley, Washington Dc</span>
+                    </li>
+                </ul>
+            </address>
+
+        </div>
+    </div>
+
+    <p class="footer__copyright">© Copyright 2025</p>
+</footer>
+
+<script type="module" src="../../dist/js/main.js"></script>
+<script type="module" src="../../dist/js/product.js"></script>
 </body>
 </html>

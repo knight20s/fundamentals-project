@@ -1,0 +1,124 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+.page-hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: variables.$section-gap-lg;
+    color: variables.$color-white;
+
+    &__bg {
+        aspect-ratio: 1700 / 554;
+        filter: brightness(60%);
+    }
+
+    &__content {
+        position: absolute;
+        display: flex;
+        inset: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: variables.$space-20px;
+    }
+
+    &__text {
+        line-height: 1.5;
+        max-width: 425px;
+        text-align: center;
+    }
+}
+
+.info-grid {
+    margin-bottom: variables.$section-gap-lg;
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__icon {
+        width: 62px;
+        height: 62px;
+        padding: 7px;
+        background-color: variables.$color-accent;
+    }
+
+    &__title {
+        font-size: 20px;
+        font-weight: 700;
+        margin-block: variables.$space-25px;
+    }
+
+    &__text {
+        line-height: 1.5;
+    }
+}
+
+.about-story {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 38px;
+    margin-bottom: variables.$section-gap-lg;
+
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: variables.$space-30px;
+        align-items: start;
+    }
+
+    &__title {
+        @extend %section-title;
+    }
+
+    &__text {
+        @extend %section-text;
+    }
+}
+
+.team{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 170px;
+
+    &__title{
+        @extend %section-title;
+        padding-bottom: variables.$space-10px;
+        border-bottom: 2px solid variables.$color-accent;
+        margin-bottom: variables.$space-60px;
+        margin-inline: auto;
+        width: fit-content;
+    }
+
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 35px;
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__name{
+        font-size: 20px;
+        font-weight: 700;
+        margin-block: variables.$space-30px;
+    }
+}

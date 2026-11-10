@@ -1,0 +1,123 @@
+@use "../abstracts/variables";
+
+.cart-hero {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: variables.$section-gap;
+    background-size: cover;
+    background-position: center;
+
+    &__bg {
+        aspect-ratio: 1700 / 229;
+        filter: brightness(50%);
+    }
+
+    &__title {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inset: 0;
+        color: variables.$color-white;
+        font-size: 50px;
+        font-weight: 700;
+    }
+}
+
+.cart-items {
+    margin-bottom: variables.$space-70px;
+
+    &__actions {
+        display: flex;
+        gap: variables.$space-20px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    &__btn {
+        text-transform: uppercase;
+        padding: variables.$space-20px;
+    }
+}
+
+.cart-table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    margin-bottom: variables.$section-gap;
+
+    &__cell {
+        padding-block: variables.$space-10px;
+    }
+
+    &__row {
+        border-bottom: 2px solid variables.$color-accent;
+    }
+
+    &__head {
+        background-color: variables.$color-secondary;
+    }
+
+    &__th {
+        color: variables.$color-white;
+        padding: variables.$space-20px variables.$space-40px;
+        text-transform: uppercase;
+    }
+
+    &__name, &__price, &__total {
+        font-weight: 700;
+    }
+
+    &__counter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        font-weight: 700;
+        gap: variables.$space-20px;
+
+        &-btn {
+            font-size: 35px;
+            font-weight: 700;
+        }
+    }
+}
+
+.cart-summary {
+    color: variables.$color-white;
+    background-color: variables.$color-secondary;
+    width: 570px;
+    padding: variables.$space-45px;
+
+    &__list {
+        margin-bottom: variables.$space-20px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        padding-block: 17px;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid variables.$color-accent;
+        }
+
+        &--total{
+            font-size: 20px;
+        }
+    }
+
+    &__btn {
+        padding: variables.$space-10px variables.$space-60px;
+        text-transform: uppercase;
+    }
+}
+
+
+

@@ -11,6 +11,20 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:scss": "sass src/scss:dist/css",
+    "compile:ts": "tsc",
+    "compile": "npm run compile:scss && npm run compile:ts",
+    "watch:scss": "sass --watch src/scss:dist/css",
+    "watch:ts": "tsc --watch",
+    "serve": "browser-sync start --server --no-notify --startPath src/index.html --files \"src/**/*.html, dist/**/*\"",
+    "dev": "npm run compile && concurrently \"npm:watch:*\" \"npm:serve\""
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "concurrently": "^10.0.7",
+    "prettier": "^3.9.10",
+    "sass": "^1.107.1",
+    "typescript": "^7.0.2"
   }
 }
