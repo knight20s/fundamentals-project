@@ -11,6 +11,11 @@
 <header class="header">
     <div class="container">
         <div class="header__top">
+            <button class="header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="header-menu">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
             <ul class="header__social">
                 <li class="header__social-item">
                     <a class="header__social-link" href="#!">
@@ -34,14 +39,14 @@
                     class="header__logo-text">Best Shop</span></a>
 
             <div class="header__actions">
-                <button class="header__actions-btn" type="button"><img src="../img/icons/user.svg" alt="account">
+                <button class="header__actions-btn" type="button"><img class="header__actions-icon" src="../img/icons/user.svg" alt="account">
                 </button>
-                <a class="header__actions-link" href="../html/cart.html" aria-current="page"><img
-                        src="../img/icons/cart.svg" alt="cart"></a>
+                <a class="header__actions-link" href="../html/cart.html" aria-current="page"><img class="header__actions-icon"
+                        src="../img/icons/cart.svg" alt="cart"><span class="header__cart-count" hidden>0</span></a>
             </div>
         </div>
 
-        <div class="header__bottom">
+        <div class="header__bottom" id="header-menu">
             <nav class="header__bottom-nav">
                 <ul class="header__menu">
                     <li class="header__menu-item"><a class="header__menu-link" href="../index.html"
@@ -67,80 +72,23 @@
     </section>
 
     <section class="cart-items container">
-        <table class="cart-table">
-            <thead>
-            <tr class="cart-table__head">
-                <th class="cart-table__th" scope="col">Image</th>
-                <th class="cart-table__th" scope="col">Product Name</th>
-                <th class="cart-table__th" scope="col">Price</th>
-                <th class="cart-table__th" scope="col">Quantity</th>
-                <th class="cart-table__th" scope="col">Total</th>
-                <th class="cart-table__th" scope="col">Delete</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr class="cart-table__row">
-                <td class="cart-table__cell cart-table__image">
-                    <img class="cart-table__img" src="../img/cart/suitcase-dark-blue.png" alt="">
-                </td>
-                <td class="cart-table__cell cart-table__name">Nomad Haven</td>
-                <td class="cart-table__cell cart-table__price">$250</td>
-                <td class="cart-table__cell cart-table__quantity">
-                    <div class="cart-table__counter">
-                        <button class="cart-table__counter-btn" type="button" aria-label="Decrease quantity">-</button>
-                        <span class="cart-table__value">1</span>
-                        <button class="cart-table__counter-btn" type="button" aria-label="Increase quantity">+</button>
-                    </div>
-                </td>
-                <td class="cart-table__cell cart-table__total">$250</td>
-                <td class="cart-table__cell">
-                    <button class="cart-table__delete" type="button" aria-label="Remove Nomad Haven">
-                        <img class="cart-table__bin" src="../img/icons/bin.svg" alt="">
-                    </button>
-                </td>
-            </tr>
-            <tr class="cart-table__row">
-                <td class="cart-table__cell cart-table__image">
-                    <img class="cart-table__img" src="../img/cart/suitcase-dark-blue.png" alt="">
-                </td>
-                <td class="cart-table__cell cart-table__name">Nomad Haven</td>
-                <td class="cart-table__cell cart-table__price">$250</td>
-                <td class="cart-table__cell cart-table__quantity">
-                    <div class="cart-table__counter">
-                        <button class="cart-table__counter-btn" type="button" aria-label="Decrease quantity">-</button>
-                        <span class="cart-table__value">1</span>
-                        <button class="cart-table__counter-btn" type="button" aria-label="Increase quantity">+</button>
-                    </div>
-                </td>
-                <td class="cart-table__cell cart-table__total">$250</td>
-                <td class="cart-table__cell">
-                    <button class="cart-table__delete" type="button" aria-label="Remove Nomad Haven">
-                        <img class="cart-table__bin" src="../img/icons/bin.svg" alt="">
-                    </button>
-                </td>
-            </tr>
-            <tr class="cart-table__row">
-                <td class="cart-table__cell cart-table__image">
-                    <img class="cart-table__img" src="../img/cart/suitcase-dark-blue.png" alt="">
-                </td>
-                <td class="cart-table__cell cart-table__name">Nomad Haven</td>
-                <td class="cart-table__cell cart-table__price">$250</td>
-                <td class="cart-table__cell cart-table__quantity">
-                    <div class="cart-table__counter">
-                        <button class="cart-table__counter-btn" type="button" aria-label="Decrease quantity">-</button>
-                        <span class="cart-table__value">1</span>
-                        <button class="cart-table__counter-btn" type="button" aria-label="Increase quantity">+</button>
-                    </div>
-                </td>
-                <td class="cart-table__cell cart-table__total">$250</td>
-                <td class="cart-table__cell">
-                    <button class="cart-table__delete" type="button" aria-label="Remove Nomad Haven">
-                        <img class="cart-table__bin" src="../img/icons/bin.svg" alt="">
-                    </button>
-                </td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="cart-items__table-wrap">
+            <table class="cart-table">
+                <thead>
+                <tr class="cart-table__head">
+                    <th class="cart-table__th" scope="col">Image</th>
+                    <th class="cart-table__th" scope="col">Product Name</th>
+                    <th class="cart-table__th" scope="col">Price</th>
+                    <th class="cart-table__th" scope="col">Quantity</th>
+                    <th class="cart-table__th" scope="col">Total</th>
+                    <th class="cart-table__th" scope="col">Delete</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
 
         <div class="cart-items__footer">
             <div class="cart-items__actions">

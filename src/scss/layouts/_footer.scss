@@ -31,6 +31,15 @@
     &__benefits-list {
         display: flex;
         gap: 90px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            gap: 30px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
     }
 
     &__benefits-item {
@@ -50,6 +59,17 @@
         "nav contacts"
         "shipping contacts";
         margin-block: variables.$section-gap-lg;
+
+        @include mixins.media(variables.$bp-tablet) {
+            row-gap: variables.$space-40px;
+            grid-template-columns: 1fr;
+            margin-block: variables.$space-40px;
+            text-align: center;
+            grid-template-areas:
+            "nav"
+            "contacts"
+            "shipping";
+        }
     }
 
     &__main-info {
@@ -57,19 +77,33 @@
         display: flex;
         gap: 145px;
         margin-bottom: 50px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            margin-bottom: 0;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: variables.$space-30px;
+        }
     }
 
     &__shipping {
         grid-area: shipping;
+
     }
 
     &__shipping-title {
         @extend %footer-title;
+
+
     }
 
     &__shipping-text {
-        max-width: 611px;
         line-height: 1.5;
+        max-width: 611px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            max-width: 770px;
+        }
     }
 
     &__contacts {
@@ -86,6 +120,14 @@
         gap: 25px;
         margin-top: 70px;
         line-height: 1.5;
+
+        @include mixins.media(variables.$bp-laptop) {
+            grid-template-columns: 1fr;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            margin-top: variables.$space-30px;
+        }
     }
 
     &__contacts-title {
@@ -96,6 +138,10 @@
         display: flex;
         align-items: center;
         gap: 14px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            justify-content: center;
+        }
     }
 
     &__column-title {

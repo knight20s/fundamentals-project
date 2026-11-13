@@ -1,5 +1,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
 $sidebar-width: 350px;
 
@@ -7,12 +8,42 @@ $sidebar-width: 350px;
     margin-bottom: variables.$section-gap;
     display: grid;
     grid-template-columns: 1fr $sidebar-width;
-    gap: variables.$space-50px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    "content search"
+    "content aside";
+    gap: variables.$space-45px variables.$space-50px;
+
+    @include mixins.media(variables.$bp-tablet) {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-template-areas:
+        "search"
+        "content"
+        "aside";
+        row-gap: variables.$space-30px;
+    }
+
+    &__content {
+        grid-area: content;
+    }
+
+    &__search {
+        grid-area: search;
+    }
+
+    &__aside {
+        grid-area: aside;
+    }
 
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: variables.$space-40px variables.$space-10px;
+
+        @include mixins.media(variables.$bp-mobile-lg) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__pagination {
@@ -55,10 +86,11 @@ $sidebar-width: 350px;
         display: flex;
         flex-direction: column;
         gap: variables.$space-25px;
-    }
 
-    &__search {
-        margin-bottom: variables.$space-45px;
+        @include mixins.media(variables.$bp-tablet) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__title {
@@ -104,6 +136,16 @@ $sidebar-width: 350px;
         padding-top: variables.$space-20px;
         border-bottom: 2px solid variables.$color-accent;
         border-top: 2px solid variables.$color-accent;
+
+        @include mixins.media(variables.$bp-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mixins.media(variables.$bp-mobile) {
+            display: flex;
+            flex-direction: column;
+            gap: variables.$space-15px;
+        }
     }
 
     &__field {
@@ -114,6 +156,10 @@ $sidebar-width: 350px;
     &__label {
         font-weight: 700;
         margin-bottom: 13px;
+
+        @include mixins.media(variables.$bp-mobile) {
+            margin-bottom: variables.$space-10px;
+        }
     }
 
     &__checkbox {
@@ -136,11 +182,20 @@ $sidebar-width: 350px;
         display: flex;
         gap: variables.$space-20px;
         margin-top: variables.$space-60px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            margin-top: variables.$space-30px;
+        }
     }
 
     &__buttons-btn {
         padding: variables.$space-20px variables.$space-50px;
         text-transform: uppercase;
+
+        @include mixins.media(variables.$bp-tablet) {
+            padding: variables.$space-15px variables.$space-20px;
+            font-size: 16px;
+        }
     }
 }
 

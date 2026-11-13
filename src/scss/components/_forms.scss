@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixins";
 
 .review-form {
     display: flex;
@@ -48,6 +49,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: variables.$space-20px;
+
+        @include mixins.media(variables.$bp-mobile) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__checkbox {

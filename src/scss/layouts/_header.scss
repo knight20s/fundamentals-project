@@ -17,12 +17,37 @@
         align-items: center;
         border-bottom: 1px solid variables.$color-header-underline;
         padding-block: 50px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            padding-block: variables.$space-30px;
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        &-line {
+            height: 2px;
+            width: variables.$space-25px;
+            background-color: variables.$color-primary;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            display: flex;
+            flex-direction: column;
+            gap: variables.$space-5px;
+            justify-self: start;
+        }
     }
 
 
     &__social {
         display: flex;
         gap: variables.$space-20px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            display: none;
+        }
     }
 
     &__social-link {
@@ -33,12 +58,33 @@
         }
     }
 
-    &__actions-btn, &__actions-link{
-        transition: filter 0.3s ease;
+    &__actions-btn, &__actions-link {
+        position: relative;
+    }
 
-        &:hover {
-            @extend %header-link-hover;
-        }
+    &__actions-icon {
+        transition: filter 0.3s ease;
+    }
+
+    &__actions-btn:hover &__actions-icon,
+    &__actions-link:hover &__actions-icon {
+        @extend %header-link-hover;
+    }
+
+    &__cart-count {
+        position: absolute;
+        top: -6px;
+        right: -10px;
+        min-width: 18px;
+        height: 18px;
+        padding-inline: 4px;
+        border-radius: 9px;
+        background-color: variables.$color-accent;
+        color: variables.$color-white;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 18px;
+        text-align: center;
     }
 
     &__logo {
@@ -49,6 +95,10 @@
         font-weight: 700;
         text-transform: uppercase;
         font-size: 30px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            font-size: 20px;
+        }
     }
 
     &__logo-icon {
@@ -56,6 +106,10 @@
         width: 35px;
         padding: 3px;
         border-radius: 25%;
+
+        @include mixins.media(variables.$bp-tablet) {
+            width: 30px;
+        }
     }
 
     &__actions {
@@ -64,14 +118,31 @@
         justify-self: end;
     }
 
-    &__bottom{
+    &__bottom {
         padding-block: variables.$space-30px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            padding-block: variables.$space-20px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            display: none;
+
+            &--open {
+                display: block;
+            }
+        }
     }
 
     &__menu {
         display: flex;
         justify-content: center;
         gap: variables.$space-30px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__menu-link {

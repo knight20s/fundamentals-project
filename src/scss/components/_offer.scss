@@ -1,8 +1,12 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
 .offer {
     margin-bottom: variables.$section-gap-lg;
+    @include mixins.media(variables.$bp-tablet){
+        margin-bottom: variables.$section-gap;
+    }
 
     &__content {
         display: grid;
@@ -14,6 +18,14 @@
         background-position: center;
         aspect-ratio: 1300 / 407;
         color: variables.$color-white;
+
+        @include mixins.media(variables.$bp-tablet) {
+            grid-template-columns: 1fr;
+            gap: variables.$space-20px;
+            aspect-ratio: auto;
+            padding-block: variables.$space-40px;
+            text-align: center;
+        }
     }
 
     &__sale {
@@ -25,6 +37,14 @@
     &__discount {
         font-size: 225px;
         font-weight: 900;
+
+        @include mixins.media(variables.$bp-laptop) {
+            font-size: 150px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            font-size: 100px;
+        }
     }
 
     &__note {
@@ -33,6 +53,14 @@
 
     &__info {
         margin-inline: 110px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            margin-inline: variables.$space-40px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            margin-inline: variables.$space-20px;
+        }
     }
 
     &__title {

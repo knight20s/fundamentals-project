@@ -1,5 +1,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
 .hero {
     background-color: variables.$color-hero-bg;
@@ -9,15 +10,36 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
         min-height: 860px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            min-height: 600px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            grid-template-columns: 1fr;
+            gap: variables.$space-30px;
+            min-height: auto;
+            padding-block: variables.$space-40px 140px;
+            text-align: center;
+        }
     }
 
     &__img {
         justify-self: end;
+
+        @include mixins.media(variables.$bp-tablet) {
+            justify-self: center;
+            max-width: 70%;
+        }
     }
 
     &__title {
         @extend %section-title;
         font-size: 50px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            font-size: 34px;
+        }
     }
 
     &__text {
@@ -36,10 +58,22 @@
         background-color: variables.$color-white;
 
         @extend %shadow-card;
+
+        @include mixins.media(variables.$bp-tablet) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__quote {
         margin: 75px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            margin: variables.$space-40px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            margin: variables.$space-25px;
+        }
     }
 
     &__author {
@@ -71,6 +105,7 @@
 
     &__discount {
         display: flex;
+        min-width: 0;
         aspect-ratio: 646 / 566;
         flex-direction: column;
         align-items: flex-start;
@@ -79,6 +114,15 @@
         url("../../src/img/home/suitcases-main-banner.jpg");
         background-size: cover;
         padding: 70px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            padding: variables.$space-40px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            aspect-ratio: auto;
+            padding: variables.$space-25px;
+        }
     }
 
     &__discount-title {
@@ -120,6 +164,14 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: variables.$space-40px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            gap: variables.$space-20px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
@@ -157,23 +209,46 @@
         left: 0;
         padding: variables.$space-20px;
         color: variables.$color-white;
+
+        @include mixins.media(variables.$bp-tablet) {
+            padding: variables.$space-5px;
+            font-size: variables.$font-size-compact;
+        }
     }
 
     &__list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: variables.$space-40px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            gap: variables.$space-20px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__title {
         font-weight: 700;
         font-size: 19px;
         margin-inline: variables.$space-20px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            font-size: inherit;
+            margin-inline: variables.$space-10px;
+        }
     }
 
     &__text {
         font-size: 19px;
         margin: variables.$space-20px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            font-size: inherit;
+            margin: variables.$space-10px;
+        }
     }
 }
 
@@ -192,6 +267,14 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: variables.$space-40px;
+
+        @include mixins.media(variables.$bp-laptop) {
+            gap: variables.$space-20px;
+        }
+
+        @include mixins.media(variables.$bp-tablet) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }
 
@@ -210,6 +293,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: variables.$space-20px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__card{
@@ -220,6 +307,10 @@
         padding: 45px 40px;
 
         @extend %shadow-card;
+
+        @include mixins.media(variables.$bp-laptop) {
+            padding: variables.$space-30px variables.$space-20px;
+        }
     }
 
     &__review{

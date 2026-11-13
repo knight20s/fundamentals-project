@@ -1,5 +1,6 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
 .feedback {
     display: grid;
@@ -7,7 +8,12 @@
     gap: variables.$space-60px;
     margin-bottom: variables.$section-gap-lg;
 
-    &__field{
+    @include mixins.media(variables.$bp-tablet) {
+        grid-template-columns: 1fr;
+        margin-bottom: variables.$section-gap;
+    }
+
+    &__field {
         display: flex;
         flex-direction: column;
     }
@@ -16,16 +22,30 @@
         font-size: 25px;
         font-weight: 700;
         margin-bottom: 35px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            text-align: center;
+            margin-bottom: variables.$space-15px;
+        }
     }
 
     &__text {
         margin-bottom: variables.$space-30px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            text-align: center;
+            margin-bottom: variables.$space-10px;
+        }
     }
 
     &__form {
         display: flex;
         flex-direction: column;
         gap: variables.$space-40px;
+
+        @include mixins.media(variables.$bp-tablet) {
+            gap: variables.$space-20px;
+        }
     }
 
     &__label {
@@ -56,7 +76,7 @@
         }
     }
 
-    &__btn{
+    &__btn {
         font-size: 12px;
         padding: 13px 30px;
         text-transform: uppercase;
@@ -66,15 +86,19 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        @include mixins.media(variables.$bp-tablet) {
+            display: none;
+        }
     }
 
-    &__actions{
+    &__actions {
         display: flex;
         align-items: center;
         gap: 10px;
     }
 
-    &__message{
+    &__message {
         font-size: 20px;
     }
 }

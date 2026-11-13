@@ -11,6 +11,11 @@
 <header class="header">
     <div class="container">
         <div class="header__top">
+            <button class="header__burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="header-menu">
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+                <span class="header__burger-line"></span>
+            </button>
             <ul class="header__social">
                 <li class="header__social-item">
                     <a class="header__social-link" href="#!">
@@ -34,14 +39,14 @@
                     class="header__logo-text">Best Shop</span></a>
 
             <div class="header__actions">
-                <button class="header__actions-btn" type="button"><img src="../img/icons/user.svg" alt="account">
+                <button class="header__actions-btn" type="button"><img class="header__actions-icon" src="../img/icons/user.svg" alt="account">
                 </button>
-                <a class="header__actions-link" href="../html/cart.html"><img src="../img/icons/cart.svg"
-                                                                              alt="cart"></a>
+                <a class="header__actions-link" href="../html/cart.html"><img class="header__actions-icon" src="../img/icons/cart.svg"
+                                                                              alt="cart"><span class="header__cart-count" hidden>0</span></a>
             </div>
         </div>
 
-        <div class="header__bottom">
+        <div class="header__bottom" id="header-menu">
             <nav class="header__bottom-nav">
                 <ul class="header__menu">
                     <li class="header__menu-item"><a class="header__menu-link" href="../index.html"
@@ -115,6 +120,16 @@
     </section>
 
     <section class="catalog container">
+        <search class="catalog__search">
+            <form class="search-form" method="get">
+                <input class="search-form__input" type="search" name="search" placeholder="Search Models"
+                       aria-label="Search models">
+                <button class="search-form__btn" type="submit" aria-label="Search product">
+                    <img class="search-form__icon" src="../img/icons/search.svg" alt="">
+                </button>
+            </form>
+        </search>
+
         <div class="catalog__content">
             <div class="catalog-toolbar">
                 <p class="catalog-toolbar__results">Showing 1-12 Of 15 Results</p>
@@ -264,16 +279,6 @@
         </div>
 
         <aside class="catalog__aside top-sets">
-            <search>
-                <form class="top-sets__search search-form" method="get">
-                    <input class="search-form__input" type="search" name="search" placeholder="Search Models"
-                           aria-label="Search models">
-                    <button class="search-form__btn" type="submit" aria-label="Search product">
-                        <img class="search-form__icon" src="../img/icons/search.svg" alt="">
-                    </button>
-                </form>
-            </search>
-
             <h2 class="top-sets__title">
                 Top Best Sets
             </h2>

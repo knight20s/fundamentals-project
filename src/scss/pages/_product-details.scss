@@ -1,12 +1,38 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
 .product {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: variables.$space-40px;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+        "gallery title"
+        "gallery info";
+    gap: 0 variables.$space-40px;
     margin-bottom: variables.$section-gap;
 
+    @include mixins.media(variables.$bp-tablet) {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-template-areas:
+            "title"
+            "gallery"
+            "info";
+        row-gap: variables.$space-20px;
+    }
+
+    &__gallery {
+        grid-area: gallery;
+
+        @include mixins.media(variables.$bp-tablet) {
+            justify-self: center;
+        }
+    }
+
+    &__info {
+        grid-area: info;
+    }
 
     &__img {
         margin-bottom: variables.$space-10px;
@@ -22,6 +48,7 @@
         font-weight: 700;
         max-width: 455px;
         line-height: 1.5;
+        grid-area: title;
     }
 
     &__rating {
@@ -108,10 +135,10 @@
         color: variables.$color-muted;
     }
 
-    &__select{
+    &__select {
         border: 1px solid #B92770;
 
-        &:focus-visible{
+        &:focus-visible {
             outline: none;
         }
     }
@@ -125,6 +152,10 @@
         gap: 125px;
         justify-content: center;
         margin-bottom: variables.$space-45px;
+
+        @include mixins.media(variables.$bp-tablet){
+            gap: variables.$space-60px;
+        }
     }
 
     &__btn {
@@ -149,7 +180,6 @@
 
 .related-products {
     margin-bottom: variables.$space-60px;
-    justify-content: center;
 
     &__title {
         width: fit-content;
@@ -166,6 +196,10 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: variables.$space-40px;
+
+        @include mixins.media(variables.$bp-tablet){
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
 
@@ -174,10 +208,19 @@
     grid-template-columns: 1fr 1fr;
     gap: variables.$space-90px;
 
+    @include mixins.media(variables.$bp-tablet) {
+        grid-template-columns: 1fr;
+        gap: variables.$space-40px;
+    }
+
     &__title {
         margin-bottom: variables.$space-90px;
         font-weight: 700;
         color: variables.$color-primary;
+
+        @include mixins.media(variables.$bp-tablet) {
+            margin-bottom: variables.$space-30px;
+        }
     }
 }
 
@@ -203,6 +246,11 @@
         display: flex;
         align-items: center;
         gap: variables.$space-20px;
+
+        @include mixins.media(variables.$bp-mobile) {
+            flex-wrap: wrap;
+            gap: variables.$space-5px variables.$space-15px;
+        }
     }
 
     &__name {
