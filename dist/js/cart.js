@@ -25,6 +25,32 @@ function createCartRow(item, index) {
     `;
     return tr;
 }
+function updateSummary() {
+    const subtotal = document.querySelector("#cart-subtotal");
+    const shipping = document.querySelector("#cart-shipping");
+    const discount = document.querySelector("#cart-discount");
+    const discountRow = document.querySelector("#cart-discount-row");
+    const total = document.querySelector("#cart-total");
+    if (!subtotal || !shipping || !discount || !discountRow || !total) {
+        return;
+    }
+    const cart = getCart();
+    let subTotalPrice = 0;
+    cart.forEach((item) => subTotalPrice += item.price * item.quantity);
+    subtotal.textContent = `$${String(subTotalPrice)}`;
+    let discountPrice = 0;
+    let shippingPrice = 0;
+    if (subTotalPrice > 3000) {
+        discountPrice = subTotalPrice * 0.1;
+    }
+    discountRow.hidden = discountPrice === 0;
+    if (subTotalPrice > 0) {
+        shippingPrice = 30;
+    }
+    shipping.textContent = `$${String(shippingPrice)}`;
+    discount.textContent = `-$${String(discountPrice)}`;
+    total.textContent = `$${String(subTotalPrice - discountPrice + shippingPrice)}`;
+}
 function renderCart() {
     const tbody = document.querySelector("tbody");
     if (!tbody) {
@@ -32,6 +58,26 @@ function renderCart() {
     }
     tbody.innerHTML = "";
     getCart().forEach((item, index) => tbody.append(createCartRow(item, index)));
+    updateSummary();
+}
+function clearCart(message) {
+    const cartMessage = document.querySelector("#cart-message");
+    if (!cartMessage) {
+        return;
+    }
+    saveCart([]);
+    renderCart();
+    cartMessage.textContent = message;
+    cartMessage.hidden = false;
+}
+function initCartButtons() {
+    const cartClear = document.querySelector("#cart-clear");
+    const cartCheckout = document.querySelector("#cart-checkout");
+    if (!cartClear || !cartCheckout) {
+        return;
+    }
+    cartClear.addEventListener("click", () => clearCart("Your cart is empty. Use the catalog to add new items."));
+    cartCheckout.addEventListener("click", () => clearCart("Thank you for your purchase."));
 }
 function initCartActions() {
     const tbody = document.querySelector("tbody");
@@ -72,5 +118,6 @@ function initCartActions() {
     });
 }
 renderCart();
+initCartButtons();
 initCartActions();
 //# sourceMappingURL=cart.js.map

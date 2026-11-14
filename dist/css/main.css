@@ -632,16 +632,19 @@ body {
   position: absolute;
   top: -6px;
   right: -10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 18px;
   height: 18px;
-  padding-inline: 4px;
+  padding-inline: 3px;
+  border: 2px solid #B92770;
   border-radius: 9px;
-  background-color: #B92770;
-  color: #FFF;
+  background-color: #FFF;
+  color: #B92770;
   font-size: 11px;
   font-weight: 700;
-  line-height: 18px;
-  text-align: center;
+  line-height: 1;
 }
 .header__logo {
   display: flex;

@@ -30,6 +30,42 @@ function createCartRow(item: CartItem, index: number): HTMLTableRowElement {
     return tr;
 }
 
+function updateSummary(): void {
+    const subtotal = document.querySelector<HTMLElement>("#cart-subtotal");
+    const shipping = document.querySelector<HTMLElement>("#cart-shipping");
+    const discount = document.querySelector<HTMLElement>("#cart-discount");
+    const discountRow = document.querySelector<HTMLElement>("#cart-discount-row");
+    const total = document.querySelector<HTMLElement>("#cart-total");
+
+    if (!subtotal || !shipping || !discount || !discountRow || !total) {
+        return;
+    }
+
+    const cart = getCart();
+
+    let subTotalPrice = 0;
+    cart.forEach((item) => subTotalPrice += item.price * item.quantity);
+    subtotal.textContent = `$${String(subTotalPrice)}`;
+
+    let discountPrice = 0;
+    let shippingPrice = 0;
+
+    if (subTotalPrice > 3000) {
+        discountPrice = subTotalPrice * 0.1;
+    }
+    discountRow.hidden = discountPrice === 0;
+
+    if (subTotalPrice > 0){
+        shippingPrice = 30;
+    }
+
+
+    shipping.textContent = `$${String(shippingPrice)}`;
+    discount.textContent = `-$${String(discountPrice)}`;
+    total.textContent = `$${String(subTotalPrice - discountPrice + shippingPrice)}`;
+
+}
+
 function renderCart(): void {
     const tbody = document.querySelector("tbody");
 
@@ -40,6 +76,32 @@ function renderCart(): void {
     tbody.innerHTML = "";
 
     getCart().forEach((item: CartItem, index: number) => tbody.append(createCartRow(item, index)));
+    updateSummary();
+}
+
+function clearCart(message: string): void {
+    const cartMessage = document.querySelector<HTMLElement>("#cart-message");
+
+    if (!cartMessage) {
+        return;
+    }
+
+    saveCart([]);
+    renderCart();
+    cartMessage.textContent = message;
+    cartMessage.hidden = false;
+}
+
+function initCartButtons(): void{
+    const cartClear = document.querySelector<HTMLElement>("#cart-clear");
+    const cartCheckout = document.querySelector<HTMLElement>("#cart-checkout");
+
+    if (!cartClear || !cartCheckout) {
+        return;
+    }
+
+    cartClear.addEventListener("click", () => clearCart("Your cart is empty. Use the catalog to add new items."));
+    cartCheckout.addEventListener("click", () => clearCart("Thank you for your purchase."));
 }
 
 function initCartActions(): void {
@@ -90,4 +152,5 @@ function initCartActions(): void {
 }
 
 renderCart();
-initCartActions()
+initCartButtons();
+initCartActions();
