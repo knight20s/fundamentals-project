@@ -39,10 +39,15 @@ function showPage(product: Product[], page: number): void {
         return;
     }
 
-    catalogResult.textContent = `Showing ${start + 1}-${Math.min(end, product.length)} Of ${product.length} Results`;
-
+    if (product.length === 0) {
+        catalogResult.textContent = `No products found`;
+    } else {
+        catalogResult.textContent = `Showing ${start + 1}-${Math.min(end, product.length)} Of ${product.length} Results`;
+    }
     renderProducts(product.slice(start, end));
     renderPagination(Math.ceil(product.length / PRODUCTS_PER_PAGE), page);
+
+
 }
 
 function renderPagination(totalPages: number, page: number): void {
@@ -55,7 +60,7 @@ function renderPagination(totalPages: number, page: number): void {
     }
 
     paginationBtnPrev.hidden = page === 1;
-    paginationBtnNext.hidden = page === totalPages;
+    paginationBtnNext.hidden = page >= totalPages;
 
     paginationList.textContent = "";
 
@@ -123,25 +128,59 @@ function initSort(): void {
     }
 
     sort.addEventListener("change", () => {
-        currentProducts = sortProducts(allProducts, sort.value);
-        showPage(currentProducts, 1);
-    })
+        updateCatalog();
+    });
 }
 
-function updateCatalog(): void{
+function updateCatalog(): void {
     const size = document.querySelector<HTMLSelectElement>("#filter-size");
     const color = document.querySelector<HTMLSelectElement>("#filter-color");
     const category = document.querySelector<HTMLSelectElement>("#filter-category");
-    const sales = document.querySelector<HTMLSelectElement>("#filter-sales");
     const sort = document.querySelector<HTMLSelectElement>("#sort");
+    const sales = document.querySelector<HTMLInputElement>("#filter-sales");
 
     if (!color || !category || !size || !sales || !sort) {
         return;
     }
 
+    const filtered = allProducts.filter((product) => {
+        const sizeOk = !size.value || product.size.split(", ").includes(size.value);
+        const colorOk = !color.value || product.color === color.value;
+        const categoryOk = !category.value || product.category === category.value;
+        const salesOk = !sales.checked || product.salesStatus === true;
 
+        return sizeOk && colorOk && categoryOk && salesOk;
+    });
+
+    currentProducts = sortProducts(filtered, sort.value);
+    showPage(currentProducts, 1);
+}
+
+function initFilters(): void {
+    const sort = document.querySelector<HTMLSelectElement>("#sort");
+    const form = document.querySelector<HTMLFormElement>(".filter__form");
+    const hide = document.querySelector<HTMLElement>("#filter-hide");
+    const types = document.querySelector<HTMLElement>(".filter__types");
+
+    if (!form || !hide || !types || !sort) {
+        return;
+    }
+
+    form.addEventListener("change", () => {
+        updateCatalog();
+    })
+
+    form.addEventListener("reset", () => {
+        sort.value = "default";
+        setTimeout(updateCatalog);
+    })
+
+    hide.addEventListener("click", () => {
+        types.hidden = !types.hidden;
+    })
 }
 
 initCatalog();
 initPagination();
 initSort();
+initFilters();

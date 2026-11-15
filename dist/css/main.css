@@ -227,6 +227,7 @@ body {
 }
 
 .search-form {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -239,6 +240,18 @@ body {
 }
 .search-form__btn {
   display: flex;
+}
+.search-form__notice {
+  position: absolute;
+  top: calc(100% + 5px);
+  right: 0;
+  left: 0;
+  z-index: 1;
+  padding: 10px 15px;
+  border: 1px solid #B92770;
+  background-color: #FFF;
+  color: #B92770;
+  font-size: 13px;
 }
 
 .pagination {
