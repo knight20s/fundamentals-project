@@ -43,6 +43,7 @@
 
         &--prev {
             grid-column: 1;
+            justify-self: start;
         }
 
         &--next {

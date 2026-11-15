@@ -279,6 +279,7 @@ body {
 }
 .pagination__btn--prev {
   grid-column: 1;
+  justify-self: start;
 }
 .pagination__btn--next {
   grid-column: 3;
