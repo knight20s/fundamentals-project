@@ -4,6 +4,7 @@
 
 .offer {
     margin-bottom: variables.$section-gap-lg;
+
     @include mixins.media(variables.$bp-tablet){
         margin-bottom: variables.$section-gap;
     }
@@ -12,7 +13,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)),
         url("../../src/img/home/offer-of-the-month-image.jpg");
         background-size: cover;
         background-position: center;

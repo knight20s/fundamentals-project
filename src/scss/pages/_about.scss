@@ -156,6 +156,7 @@
 
     &__title {
         @extend %section-title;
+
         padding-bottom: variables.$space-10px;
         border-bottom: 2px solid variables.$color-accent;
         margin-bottom: variables.$space-60px;

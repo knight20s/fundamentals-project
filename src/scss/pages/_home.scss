@@ -35,6 +35,7 @@
 
     &__title {
         @extend %section-title;
+
         font-size: 50px;
 
         @include mixins.media(variables.$bp-tablet) {
@@ -44,6 +45,7 @@
 
     &__text {
         @extend %section-text;
+
         margin-block: variables.$space-30px;
     }
 }
@@ -94,12 +96,14 @@
 
     &__title {
         @extend %section-title;
+
         line-height: 1.2;
         margin-block: variables.$space-30px;
     }
 
     &__text {
         @extend %section-text;
+
         margin-block: variables.$space-15px;
     }
 
@@ -110,7 +114,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+        background-image: linear-gradient(rgb(0 0 0 / 40%), rgb(0 0 0 / 40%)),
         url("../../src/img/home/suitcases-main-banner.jpg");
         background-size: cover;
         padding: 70px;
@@ -127,11 +131,13 @@
 
     &__discount-title {
         @extend %section-title;
+
         color: variables.$color-white;
     }
 
     &__discount-text {
         @extend %section-text;
+
         color: variables.$color-white;
         margin-block: variables.$space-30px;
     }
@@ -146,6 +152,41 @@
 
     &__text {
         @extend %section-subheading;
+    }
+
+    &__controls {
+        display: flex;
+        justify-content: center;
+        gap: variables.$space-15px;
+        margin-top: variables.$space-30px;
+    }
+
+    &__arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border: 2px solid variables.$color-accent;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: variables.$color-accent;
+        }
+    }
+
+    &__arrow:hover &__arrow-icon {
+        filter: brightness(0) invert(1);
+    }
+
+    &__arrow-icon {
+        &--prev {
+            transform: rotate(90deg);
+        }
+
+        &--next {
+            transform: rotate(-90deg);
+        }
     }
 }
 
@@ -183,7 +224,7 @@
         transition: box-shadow 0.3s ease;
 
         &:hover {
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 10px 30px rgb(0 0 0 / 40%);
         }
     }
 

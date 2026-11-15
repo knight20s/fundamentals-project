@@ -3,18 +3,28 @@
 @use "../abstracts/placeholders";
 
 .login {
-    width: min(420px, calc(100% - #{variables.$space-40px}));
-    margin: auto;
-    padding: variables.$space-40px;
+    position: fixed;
+    top: 94px;
+    right: max(#{variables.$space-15px}, calc(50vw - #{variables.$container-width * 0.5}));
+    bottom: auto;
+    left: auto;
+    width: min(360px, calc(100% - #{variables.$space-30px}));
+    margin: 0;
+    padding: variables.$space-30px;
     background-color: variables.$color-white;
+
     @extend %shadow-card;
+
+    @include mixins.media(variables.$bp-laptop) {
+        top: 74px;
+    }
 
     @include mixins.media(variables.$bp-mobile) {
         padding: variables.$space-25px;
     }
 
     &::backdrop {
-        background-color: rgb(0 0 0 / 0.5);
+        background-color: transparent;
     }
 
     &__form {
@@ -87,7 +97,7 @@
 
     &__message {
         font-size: variables.$font-size-small;
-        color: variables.$feedback__message--error;
+        color: variables.$color-error;
     }
 
     &__btn {

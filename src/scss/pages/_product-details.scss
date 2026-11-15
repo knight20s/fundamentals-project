@@ -189,7 +189,6 @@
         font-weight: 700;
         margin-bottom: variables.$space-70px;
         padding-bottom: variables.$space-10px;
-
         border-bottom: 2px solid variables.$color-accent;
     }
 
@@ -233,7 +232,6 @@
         flex-shrink: 0;
         width: 46px;
         height: 46px;
-        padding: variables.$space-10px;
         border-radius: 50%;
         background-color: variables.$color-hero-bg;
         object-fit: contain;
@@ -256,7 +254,7 @@
 
     &__name {
         font-weight: 700;
-        color: variables.$color-primary;
+        color: variables.$color-secondary;
     }
 
     &__date {
@@ -272,5 +270,11 @@
 
     &__text {
         margin-top: variables.$space-25px;
+        color: variables.$color-primary;
+    }
+
+    &__star{
+        width: 16px;
+        height: 16px;
     }
 }

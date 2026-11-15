@@ -4,7 +4,7 @@ Multi-page luggage store built from a Figma mockup with HTML, SCSS and TypeScrip
 
 ## Requirements
 
-- Node.js 20 or newer
+- Node.js 20.19 or newer
 - npm (comes with Node.js)
 
 ## Getting started
@@ -26,6 +26,9 @@ A local server is required: product data is loaded from `src/assets/data.json` w
 | `npm run compile` | one-time build of SCSS and TypeScript |
 | `npm run compile:scss` | SCSS → `dist/css` |
 | `npm run compile:ts` | TypeScript → `dist/js` |
+| `npm run lint` | check TypeScript (ESLint) and SCSS (Stylelint) |
+| `npm run lint:ts` | ESLint for `src/ts` |
+| `npm run lint:scss` | Stylelint for `src/scss` |
 
 ## Project structure
 

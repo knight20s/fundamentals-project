@@ -18,13 +18,22 @@
     "watch:scss": "sass --watch src/scss:dist/css",
     "watch:ts": "tsc --watch",
     "serve": "browser-sync start --server --no-notify --startPath src/index.html --files \"src/**/*.html, dist/**/*\"",
-    "dev": "npm run compile && concurrently \"npm:watch:*\" \"npm:serve\""
+    "dev": "npm run compile && concurrently \"npm:watch:*\" \"npm:serve\"",
+    "lint:ts": "eslint src/ts",
+    "lint:scss": "stylelint \"src/scss/**/*.scss\"",
+    "lint": "npm run lint:ts && npm run lint:scss"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "browser-sync": "^3.0.4",
     "concurrently": "^10.0.7",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
     "prettier": "^3.9.10",
     "sass": "^1.107.1",
-    "typescript": "^7.0.2"
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.2"
   }
 }

@@ -100,18 +100,18 @@
 
     &__input--invalid,
     &__input--invalid:focus-visible {
-        border-color: variables.$feedback__message--error;
+        border-color: variables.$color-error;
     }
 
     &__message {
         font-size: 20px;
 
         &--success {
-            color: variables.$feedback__message--success;
+            color: variables.$color-success;
         }
 
         &--error {
-            color: variables.$feedback__message--error;
+            color: variables.$color-error;
         }
     }
 }

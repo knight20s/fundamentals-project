@@ -35,6 +35,20 @@ function initLogin(): void {
     closeBtn.addEventListener("click", () => {
         dialog.close();
     })
+
+    dialog.addEventListener("click", (e) => {
+        if (e.target !== dialog) {
+            return;
+        }
+
+        const rect = dialog.getBoundingClientRect();
+        const isInside = e.clientX >= rect.left && e.clientX <= rect.right
+            && e.clientY >= rect.top && e.clientY <= rect.bottom;
+
+        if (!isInside) {
+            dialog.close();
+        }
+    });
 }
 
 
@@ -80,7 +94,6 @@ function initLoginForm(): void {
         }
     })
 }
-
 
 initBurger();
 updateCartCounter();

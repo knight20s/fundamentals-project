@@ -224,17 +224,17 @@
                     <h2 class="product-reviews__title">1 review for Global Explorer Max Comfort Suitcase Pro</h2>
                     <ul class="product-reviews__list">
                         <li class="review">
-                            <img class="review__avatar" src="../img/icons/user.svg" alt="">
+                            <img class="review__avatar" src="../img/product/img.png" alt="">
                             <div class="review__body">
                                 <div class="review__header">
-                                    <p class="review__name">John Smith</p>
+                                    <p class="review__name">Ella Harper</p>
                                     <time class="review__date" datetime="2024-06-05">June 05, 2024</time>
                                     <div class="review__stars" role="img" aria-label="Rating: 5 out of 5">
                                         <img class="review__star" src="../img/icons/star.svg" alt="">
                                         <img class="review__star" src="../img/icons/star.svg" alt="">
                                         <img class="review__star" src="../img/icons/star.svg" alt="">
                                         <img class="review__star" src="../img/icons/star.svg" alt="">
-                                        <img class="review__star" src="../img/icons/star.svg" alt="">
+                                        <img class="review__star" src="../img/icons/star-muted.svg" alt="">
                                     </div>
                                 </div>
                                 <p class="review__text">
@@ -250,14 +250,19 @@
                     <h2 class="review-form__title">Add a review</h2>
                     <p class="review-form__note">Your email address won’t be shared with anybody. Required fields have the symbol *</p>
 
-                    <div class="review-form__rating">
-                        <p class="review-form__rating-label">Rate product</p>
+                    <div class="review-form__rating" role="radiogroup" aria-labelledby="rating-label">
+                        <p class="review-form__rating-label" id="rating-label">Rate product</p>
                         <div class="review-form__stars">
-                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
-                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
-                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
-                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
-                            <img class="review-form__star" src="../img/icons/star.svg" alt="">
+                            <input class="review-form__star-input visually-hidden" type="radio" name="rating" id="rating-5" value="5">
+                            <label class="review-form__star" for="rating-5"><span class="visually-hidden">5 stars</span></label>
+                            <input class="review-form__star-input visually-hidden" type="radio" name="rating" id="rating-4" value="4">
+                            <label class="review-form__star" for="rating-4"><span class="visually-hidden">4 stars</span></label>
+                            <input class="review-form__star-input visually-hidden" type="radio" name="rating" id="rating-3" value="3">
+                            <label class="review-form__star" for="rating-3"><span class="visually-hidden">3 stars</span></label>
+                            <input class="review-form__star-input visually-hidden" type="radio" name="rating" id="rating-2" value="2">
+                            <label class="review-form__star" for="rating-2"><span class="visually-hidden">2 stars</span></label>
+                            <input class="review-form__star-input visually-hidden" type="radio" name="rating" id="rating-1" value="1">
+                            <label class="review-form__star" for="rating-1"><span class="visually-hidden">1 star</span></label>
                         </div>
                     </div>
 

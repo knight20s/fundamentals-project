@@ -52,7 +52,7 @@ async function initProduct() {
         }
         value.textContent = String(quantity);
     });
-    productBtn.addEventListener("click", (e) => {
+    productBtn.addEventListener("click", () => {
         addToCart({
             id: product.id,
             name: product.name,

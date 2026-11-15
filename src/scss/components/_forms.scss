@@ -25,7 +25,30 @@
 
     &__stars {
         display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
         gap: variables.$space-5px;
+    }
+
+    &__star {
+        width: 18px;
+        height: 18px;
+        background: url("../../src/img/icons/star-muted.svg") center / contain no-repeat;
+        cursor: pointer;
+    }
+
+    &__star-input:checked ~ &__star,
+    &__stars:hover &__star:hover,
+    &__stars:hover &__star:hover ~ &__star {
+        background-image: url("../../src/img/icons/star.svg");
+    }
+
+    &__stars:hover &__star {
+        background-image: url("../../src/img/icons/star-muted.svg");
+    }
+
+    &__star-input:focus-visible + &__star {
+        outline: 1px solid variables.$color-accent;
     }
 
     &__textarea,
@@ -81,11 +104,11 @@
         font-size: variables.$font-size-small;
 
         &--success {
-            color: variables.$feedback__message--success;
+            color: variables.$color-success;
         }
 
         &--error {
-            color: variables.$feedback__message--error;
+            color: variables.$color-error;
         }
     }
 }

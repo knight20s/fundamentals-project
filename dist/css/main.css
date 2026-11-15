@@ -7,28 +7,28 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Helvetica";
+  font-family: Helvetica;
   src: url("../../src/fonts/Helvetica/HelveticaNeueCyr-Black.woff") format("woff");
   font-weight: 900;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
-  font-family: "Helvetica";
+  font-family: Helvetica;
   src: url("../../src/fonts/Helvetica/HelveticaNeueCyr-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Helvetica";
+  font-family: Helvetica;
   src: url("../../src/fonts/Helvetica/HelveticaNeueCyr-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Helvetica";
+  font-family: Helvetica;
   src: url("../../src/fonts/Helvetica/HelveticaNeueCyr-Roman.woff") format("woff");
   font-weight: 400;
   font-display: swap;
@@ -119,7 +119,6 @@ label {
   padding: 0;
   white-space: nowrap;
   clip-path: inset(100%);
-  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
@@ -175,7 +174,24 @@ body {
 }
 .review-form__stars {
   display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   gap: 5px;
+}
+.review-form__star {
+  width: 18px;
+  height: 18px;
+  background: url("../../src/img/icons/star-muted.svg") center/contain no-repeat;
+  cursor: pointer;
+}
+.review-form__star-input:checked ~ .review-form__star, .review-form__stars:hover .review-form__star:hover, .review-form__stars:hover .review-form__star:hover ~ .review-form__star {
+  background-image: url("../../src/img/icons/star.svg");
+}
+.review-form__stars:hover .review-form__star {
+  background-image: url("../../src/img/icons/star-muted.svg");
+}
+.review-form__star-input:focus-visible + .review-form__star {
+  outline: 1px solid #B92770;
 }
 .review-form__textarea, .review-form__input {
   width: 100%;
@@ -466,10 +482,20 @@ body {
 }
 
 .login {
-  width: min(420px, 100% - 40px);
-  margin: auto;
-  padding: 40px;
+  position: fixed;
+  top: 94px;
+  right: max(15px, 50vw - 650px);
+  bottom: auto;
+  left: auto;
+  width: min(360px, 100% - 30px);
+  margin: 0;
+  padding: 30px;
   background-color: #FFF;
+}
+@media (max-width: 1024px) {
+  .login {
+    top: 74px;
+  }
 }
 @media (max-width: 425px) {
   .login {
@@ -477,7 +503,7 @@ body {
   }
 }
 .login::backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
 }
 .login__form {
   position: relative;
@@ -673,7 +699,7 @@ body {
 .footer__copyright {
   text-align: center;
   margin-bottom: 55px;
-  opacity: 35%;
+  opacity: 0.35;
   font-size: 14px;
   font-family: "Inter", sans-serif;
 }
@@ -1553,7 +1579,6 @@ body {
   flex-shrink: 0;
   width: 46px;
   height: 46px;
-  padding: 10px;
   border-radius: 50%;
   background-color: #E7E8E9;
   object-fit: contain;
@@ -1574,7 +1599,7 @@ body {
 }
 .review__name {
   font-weight: 700;
-  color: #000;
+  color: #504E4A;
 }
 .review__date {
   font-size: 13px;
@@ -1587,6 +1612,11 @@ body {
 }
 .review__text {
   margin-top: 25px;
+  color: #000;
+}
+.review__star {
+  width: 16px;
+  height: 16px;
 }
 
 .hero {
@@ -1713,6 +1743,34 @@ body {
 .travel {
   margin-bottom: 80px;
 }
+.travel__controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+.travel__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #B92770;
+  transition: background-color 0.3s ease;
+}
+.travel__arrow:hover {
+  background-color: #B92770;
+}
+.travel__arrow:hover .travel__arrow-icon {
+  filter: brightness(0) invert(1);
+}
+.travel__arrow-icon--prev {
+  transform: rotate(90deg);
+}
+.travel__arrow-icon--next {
+  transform: rotate(-90deg);
+}
+
 .products {
   margin-bottom: 120px;
 }
