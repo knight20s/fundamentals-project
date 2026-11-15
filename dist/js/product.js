@@ -37,8 +37,8 @@ async function initProduct() {
     price.textContent = `$${product.price}`;
     img.src = product.imageUrl;
     img.alt = product.name;
-    rating.innerHTML = renderStars(product.rating, `product__rating-star`);
-    rating.setAttribute("aria-label", `Rating: ${product.rating} out of 5`);
+    rating.innerHTML = renderStars(product.rating, "product__rating-star")
+        + `<span class="visually-hidden">Rating: ${product.rating} out of 5</span>`;
     productQuantity.addEventListener("click", (e) => {
         const button = e.target.closest("[data-action]");
         if (!button) {

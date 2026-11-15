@@ -49,7 +49,8 @@ export function initAddToCart(products: Product[]): void {
 
 export function getRandomProducts(products: Product[], count: number): Product[] {
     const productsCopy = [...products];
-    return productsCopy.sort(() => Math.random() - 0.5).slice(0, count);
+    productsCopy.sort(() => Math.random() - 0.5);
+    return productsCopy.slice(0, count);
 }
 
 export function renderStars(rating: number, starClass: string): string{

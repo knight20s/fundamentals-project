@@ -182,7 +182,8 @@ function renderTopSets(products) {
                         <p class="top-sets__text">
                         ${product.name}
                         </p>
-                        <div class="top-sets__stars" role="img" aria-label="Rating: ${product.rating} out of 5">
+                        <div class="top-sets__stars">
+                            <span class="visually-hidden">Rating: ${product.rating} out of 5</span>
                             ${renderStars(product.rating, "top-sets__star")}
                         </div>
                         <p class="top-sets__price">

@@ -47,7 +47,7 @@
         </div>
 
         <div class="header__bottom" id="header-menu">
-            <nav class="header__bottom-nav">
+            <nav class="header__bottom-nav" aria-label="Main navigation">
                 <ul class="header__menu">
                     <li class="header__menu-item"><a class="header__menu-link" href="../index.html"
                     >Home</a></li>
@@ -65,7 +65,7 @@
 
 <main class="main">
     <section class="product container">
-        <h1 class="product__title"></h1>
+        <h1 class="product__title">Global Explorer Max Comfort Suitcase Pro</h1>
 
         <div class="product__gallery">
             <img class="product__img" src="../img/product/suitcase-yellow.png"
@@ -91,7 +91,7 @@
         </div>
         <div class="product__info">
             <div class="product__rating">
-                <div class="product__rating-stars" role="img" aria-label="Rating: 5 out of 5">
+                <div class="product__rating-stars">
 
                 </div>
 
@@ -229,7 +229,8 @@
                                 <div class="review__header">
                                     <p class="review__name">Ella Harper</p>
                                     <time class="review__date" datetime="2024-06-05">June 05, 2024</time>
-                                    <div class="review__stars" role="img" aria-label="Rating: 5 out of 5">
+                                    <div class="review__stars">
+                                        <span class="visually-hidden">Rating: 4 out of 5</span>
                                         <img class="review__star" src="../img/icons/star.svg" alt="">
                                         <img class="review__star" src="../img/icons/star.svg" alt="">
                                         <img class="review__star" src="../img/icons/star.svg" alt="">
@@ -281,7 +282,7 @@
                         Save my name, email, and website in this browser for when I leave another comment.                    </label>
 
                     <button class="review-form__btn btn" type="submit">Submit</button>
-                    <p class="review-form__message" role="status" hidden></p>
+                    <output class="review-form__message" hidden></output>
                 </form>
             </div>
         </div>
@@ -334,7 +335,7 @@
     </div>
 
     <div class="footer__main container">
-        <nav class="footer__main-info">
+        <nav class="footer__main-info" aria-label="Footer navigation">
             <div class="footer__column">
                 <h3 class="footer__column-title"><a class="footer__column-link" href="../html/about.html">About Us</a>
                 </h3>
