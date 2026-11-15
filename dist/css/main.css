@@ -1359,6 +1359,11 @@ body {
 .filter__checkbox:checked {
   background-color: #B92770;
 }
+.filter__select:valid {
+  border-color: #B92770;
+  color: #B92770;
+  font-weight: 700;
+}
 .filter__buttons {
   display: flex;
   gap: 20px;

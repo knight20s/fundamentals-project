@@ -178,6 +178,12 @@ $sidebar-width: 350px;
         }
     }
 
+    &__select:valid {
+        border-color: variables.$color-accent;
+        color: variables.$color-accent;
+        font-weight: 700;
+    }
+
     &__buttons {
         display: flex;
         gap: variables.$space-20px;
