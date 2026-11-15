@@ -158,7 +158,7 @@ function updateCatalog(): void {
 
 function initFilters(): void {
     const sort = document.querySelector<HTMLSelectElement>("#sort");
-    const form = document.querySelector<HTMLFormElement>(".filter__form");
+    const form = document.querySelector<HTMLFormElement>(".filter-form");
     const hide = document.querySelector<HTMLElement>("#filter-hide");
     const types = document.querySelector<HTMLElement>(".filter__types");
 
@@ -180,7 +180,41 @@ function initFilters(): void {
     })
 }
 
+function initSearch(): void {
+    const form = document.querySelector<HTMLFormElement>(".search-form");
+    const input = document.querySelector<HTMLInputElement>(".search-form__input");
+    const notice = document.querySelector<HTMLElement>(".search-form__notice");
+
+    if (!form || !input || !notice) {
+        return;
+    }
+
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const query = input.value.trim().toLowerCase();
+
+        if (!query) {
+            return;
+        }
+
+        const found = allProducts.find((product) => product.name.toLowerCase().includes(query))
+
+        if (found) {
+            window.location.href = `/src/html/product.html?id=${found.id}`;
+        } else {
+            notice.hidden = false;
+
+            setTimeout(() => {
+                notice.hidden = true
+            }, 3000)
+        }
+    })
+}
+
 initCatalog();
 initPagination();
 initSort();
 initFilters();
+initSearch();

@@ -123,7 +123,7 @@ function updateCatalog() {
 }
 function initFilters() {
     const sort = document.querySelector("#sort");
-    const form = document.querySelector(".filter__form");
+    const form = document.querySelector(".filter-form");
     const hide = document.querySelector("#filter-hide");
     const types = document.querySelector(".filter__types");
     if (!form || !hide || !types || !sort) {
@@ -140,8 +140,34 @@ function initFilters() {
         types.hidden = !types.hidden;
     });
 }
+function initSearch() {
+    const form = document.querySelector(".search-form");
+    const input = document.querySelector(".search-form__input");
+    const notice = document.querySelector(".search-form__notice");
+    if (!form || !input || !notice) {
+        return;
+    }
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const query = input.value.trim().toLowerCase();
+        if (!query) {
+            return;
+        }
+        const found = allProducts.find((product) => product.name.toLowerCase().includes(query));
+        if (found) {
+            window.location.href = `/src/html/product.html?id=${found.id}`;
+        }
+        else {
+            notice.hidden = false;
+            setTimeout(() => {
+                notice.hidden = true;
+            }, 3000);
+        }
+    });
+}
 initCatalog();
 initPagination();
 initSort();
 initFilters();
+initSearch();
 //# sourceMappingURL=catalog.js.map
