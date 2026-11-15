@@ -183,9 +183,14 @@ body {
   border: 1px solid #E9E9ED;
   background-color: #FFF;
   font-size: 13px;
+  transition: border-color 0.3s ease;
 }
 .review-form__textarea::placeholder, .review-form__input::placeholder {
   color: #727174;
+}
+.review-form__textarea:focus-visible, .review-form__input:focus-visible {
+  outline: none;
+  border: 1px solid #B92770;
 }
 .review-form__textarea {
   min-height: 170px;
@@ -213,14 +218,28 @@ body {
   padding: 12px 20px;
   font-size: 13px;
 }
+.review-form__message {
+  font-size: 13px;
+}
+.review-form__message--success {
+  color: green;
+}
+.review-form__message--error {
+  color: red;
+}
 
 .select {
   padding: 12px;
   border: 1px solid #E9E9ED;
   background-color: #FFF;
+  transition: border-color 0.3s ease;
 }
 .select:invalid {
   color: #727174;
+}
+.select:focus {
+  outline: none;
+  border: 1px solid #B92770;
 }
 .select option {
   color: #000;
@@ -374,7 +393,7 @@ body {
   }
 }
 
-.promo__inner, .customers__card, .top-sets__product {
+.promo__inner, .customers__card, .top-sets__product, .login {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -444,6 +463,85 @@ body {
   font-size: 18px;
   line-height: 1.5;
   margin-block: 30px;
+}
+
+.login {
+  width: min(420px, 100% - 40px);
+  margin: auto;
+  padding: 40px;
+  background-color: #FFF;
+}
+@media (max-width: 425px) {
+  .login {
+    padding: 25px;
+  }
+}
+.login::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.login__form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login__close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 28px;
+  line-height: 1;
+  color: #727174;
+}
+.login__close:hover {
+  color: #B92770;
+}
+.login__title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+}
+.login__label {
+  font-size: 13px;
+}
+.login__input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #E9E9ED;
+  font-size: 13px;
+  transition: border-color 0.3s ease;
+}
+.login__input:focus-visible {
+  outline: none;
+  border-color: #B92770;
+}
+.login__password {
+  position: relative;
+}
+.login__password .login__input {
+  padding-right: 45px;
+}
+.login__eye {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  display: flex;
+  transform: translateY(-50%);
+}
+.login__eye[aria-pressed=true] .login__eye-icon--show {
+  display: none;
+}
+.login__eye[aria-pressed=false] .login__eye-icon--hide {
+  display: none;
+}
+.login__message {
+  font-size: 13px;
+  color: red;
+}
+.login__btn {
+  margin-top: 10px;
+  width: 100%;
 }
 
 .footer__column-title, .footer__contacts-title, .footer__shipping-title {
@@ -586,7 +684,7 @@ body {
   color: #B92770;
 }
 
-.header__actions-btn:hover .header__actions-icon, .header__actions-link:hover .header__actions-icon, .header__social-link:hover {
+.header__actions-btn:hover .header__actions-icon, .header__actions-link:hover .header__actions-icon, .header__actions-btn:focus-visible .header__actions-icon, .header__actions-link:focus-visible .header__actions-icon, .header__social-link:hover {
   filter: brightness(0) saturate(100%) invert(22%) sepia(40%) saturate(4457%) hue-rotate(309deg) brightness(89%) contrast(89%);
 }
 
@@ -638,6 +736,9 @@ body {
 }
 .header__actions-btn, .header__actions-link {
   position: relative;
+}
+.header__actions-btn:focus, .header__actions-link:focus {
+  outline: none;
 }
 .header__actions-icon {
   transition: filter 0.3s ease;
@@ -1282,6 +1383,7 @@ body {
 }
 .product__img {
   margin-bottom: 10px;
+  width: 100%;
 }
 .product__thumbs {
   display: flex;
@@ -1844,8 +1946,17 @@ body {
   align-items: center;
   gap: 10px;
 }
+.feedback__input--invalid, .feedback__input--invalid:focus-visible {
+  border-color: red;
+}
 .feedback__message {
   font-size: 20px;
+}
+.feedback__message--success {
+  color: green;
+}
+.feedback__message--error {
+  color: red;
 }
 
 /*# sourceMappingURL=main.css.map */

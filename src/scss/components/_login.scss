@@ -1,0 +1,97 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+@use "../abstracts/placeholders";
+
+.login {
+    width: min(420px, calc(100% - #{variables.$space-40px}));
+    margin: auto;
+    padding: variables.$space-40px;
+    background-color: variables.$color-white;
+    @extend %shadow-card;
+
+    @include mixins.media(variables.$bp-mobile) {
+        padding: variables.$space-25px;
+    }
+
+    &::backdrop {
+        background-color: rgb(0 0 0 / 0.5);
+    }
+
+    &__form {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: variables.$space-10px;
+    }
+
+    &__close {
+        position: absolute;
+        top: -#{variables.$space-20px};
+        right: -#{variables.$space-20px};
+        font-size: 28px;
+        line-height: 1;
+        color: variables.$color-muted;
+
+        &:hover {
+            color: variables.$color-accent;
+        }
+    }
+
+    &__title {
+        margin-bottom: variables.$space-15px;
+        font-size: 24px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__label {
+        font-size: variables.$font-size-small;
+    }
+
+    &__input {
+        width: 100%;
+        padding: variables.$space-12px variables.$space-15px;
+        border: 1px solid variables.$color-border;
+        font-size: variables.$font-size-small;
+        transition: border-color 0.3s ease;
+
+        &:focus-visible {
+            outline: none;
+            border-color: variables.$color-accent;
+        }
+    }
+
+    &__password {
+        position: relative;
+
+        .login__input {
+            padding-right: variables.$space-45px;
+        }
+    }
+
+    &__eye {
+        position: absolute;
+        top: 50%;
+        right: variables.$space-10px;
+        display: flex;
+        transform: translateY(-50%);
+
+        &[aria-pressed="true"] .login__eye-icon--show {
+            display: none;
+        }
+
+        &[aria-pressed="false"] .login__eye-icon--hide {
+            display: none;
+        }
+    }
+
+    &__message {
+        font-size: variables.$font-size-small;
+        color: variables.$feedback__message--error;
+    }
+
+    &__btn {
+        margin-top: variables.$space-10px;
+        width: 100%;
+    }
+}

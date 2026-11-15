@@ -1,5 +1,5 @@
 import type {Product} from "./type.js";
-import {createProductCard, initAddToCart} from "./card.js";
+import {createProductCard, initAddToCart, getRandomProducts, renderStars} from "./card.js";
 import {getProducts} from "./api.js";
 
 const PRODUCTS_PER_PAGE = 12;
@@ -26,6 +26,9 @@ async function initCatalog() {
 
     showPage(products, 1);
     initAddToCart(products);
+
+    const sets = products.filter((filter) => filter.category === "luggage sets");
+    renderTopSets(getRandomProducts(sets, 5))
 }
 
 function showPage(product: Product[], page: number): void {
@@ -158,7 +161,7 @@ function updateCatalog(): void {
 
 function initFilters(): void {
     const sort = document.querySelector<HTMLSelectElement>("#sort");
-    const form = document.querySelector<HTMLFormElement>(".filter-form");
+    const form = document.querySelector<HTMLFormElement>(".filter__form");
     const hide = document.querySelector<HTMLElement>("#filter-hide");
     const types = document.querySelector<HTMLElement>(".filter__types");
 
@@ -211,6 +214,37 @@ function initSearch(): void {
             }, 3000)
         }
     })
+}
+
+function renderTopSets(products: Product[]): void {
+    const top = document.querySelector<HTMLElement>(".top-sets__list");
+    if (!top) {
+        return;
+    }
+
+    top.innerHTML = "";
+
+    for (const product of products) {
+        const li = document.createElement("li");
+        li.classList.add("top-sets__item");
+
+        li.innerHTML = `
+            <img class="top-sets__product" src="${product.imageUrl}" alt="${product.name}">
+                    <div class="top-sets__info">
+                        <p class="top-sets__text">
+                        ${product.name}
+                        </p>
+                        <div class="top-sets__stars" role="img" aria-label="Rating: ${product.rating} out of 5">
+                            ${renderStars(product.rating, "top-sets__star")}
+                        </div>
+                        <p class="top-sets__price">
+                            $${product.price}
+                        </p>
+                    </div>
+        `;
+
+        top.append(li);
+    }
 }
 
 initCatalog();

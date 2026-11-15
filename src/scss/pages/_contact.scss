@@ -98,8 +98,21 @@
         gap: 10px;
     }
 
+    &__input--invalid,
+    &__input--invalid:focus-visible {
+        border-color: variables.$feedback__message--error;
+    }
+
     &__message {
         font-size: 20px;
+
+        &--success {
+            color: variables.$feedback__message--success;
+        }
+
+        &--error {
+            color: variables.$feedback__message--error;
+        }
     }
 }
 

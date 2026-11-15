@@ -177,100 +177,7 @@
                 Top Best Sets
             </h2>
             <ul class="top-sets__list">
-                <li class="top-sets__item">
-                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-red-small.png" alt="">
-                    <div class="top-sets__info">
-                        <p class="top-sets__text">
-                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
-                        </p>
-                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                        </div>
-                        <p class="top-sets__price">
-                            $1000
-                        </p>
-                    </div>
-                </li>
 
-                <li class="top-sets__item">
-                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-black-small.png" alt="">
-                    <div class="top-sets__info">
-                        <p class="top-sets__text">
-                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
-                        </p>
-                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                        </div>
-                        <p class="top-sets__price">
-                            $1200
-                        </p>
-                    </div>
-                </li>
-
-                <li class="top-sets__item">
-                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-blue-small.png" alt="">
-                    <div class="top-sets__info">
-                        <p class="top-sets__text">
-                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
-                        </p>
-                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star-muted.svg" alt="">
-                        </div>
-                        <p class="top-sets__price">
-                            $2100
-                        </p>
-                    </div>
-                </li>
-
-                <li class="top-sets__item">
-                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-yellow-small.png" alt="">
-                    <div class="top-sets__info">
-                        <p class="top-sets__text">
-                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
-                        </p>
-                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star-muted.svg" alt="">
-                        </div>
-                        <p class="top-sets__price">
-                            $1500
-                        </p>
-                    </div>
-                </li>
-
-                <li class="top-sets__item">
-                    <img class="top-sets__product" src="../img/catalog/set-of-suitcases-green-small.png" alt="">
-                    <div class="top-sets__info">
-                        <p class="top-sets__text">
-                            Primis in faucibus aenean laoreet rhoncus ipsum eget.
-                        </p>
-                        <div class="top-sets__stars" role="img" aria-label="Rating: 5 out of 5">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star.svg" alt="">
-                            <img class="top-sets__star" src="../img/icons/star-muted.svg" alt="">
-                        </div>
-                        <p class="top-sets__price">
-                            $1100
-                        </p>
-                    </div>
-                </li>
             </ul>
         </aside>
     </section>
@@ -377,6 +284,29 @@
 
     <p class="footer__copyright">© Copyright 2025</p>
 </footer>
+
+<dialog class="login" id="login-modal" aria-labelledby="login-title">
+    <form class="login__form" novalidate>
+        <button class="login__close" type="button" aria-label="Close">&times;</button>
+        <h2 class="login__title" id="login-title">Log In</h2>
+
+        <label class="login__label" for="login-email">Email address *</label>
+        <input class="login__input" type="email" id="login-email" name="email" autocomplete="email" required autofocus>
+
+        <label class="login__label" for="login-password">Password *</label>
+        <div class="login__password">
+            <input class="login__input" type="password" id="login-password" name="password"
+                   autocomplete="current-password" required>
+            <button class="login__eye" type="button" aria-label="Show password" aria-pressed="false">
+                <img class="login__eye-icon login__eye-icon--show" src="../img/icons/eye.svg" alt="">
+                <img class="login__eye-icon login__eye-icon--hide" src="../img/icons/eye-off.svg" alt="">
+            </button>
+        </div>
+
+        <p class="login__message" role="alert" hidden></p>
+        <button class="login__btn btn" type="submit">Log In</button>
+    </form>
+</dialog>
 
 <script type="module" src="../../dist/js/main.js"></script>
 <script type="module" src="../../dist/js/catalog.js"></script>

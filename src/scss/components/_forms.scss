@@ -35,9 +35,15 @@
         border: 1px solid variables.$color-border;
         background-color: variables.$color-white;
         font-size: variables.$font-size-small;
+        transition: border-color 0.3s ease;
 
         &::placeholder {
             color: variables.$color-muted;
+        }
+
+        &:focus-visible {
+            outline: none;
+            border: 1px solid variables.$color-accent;
         }
     }
 
@@ -70,15 +76,33 @@
         padding: variables.$space-12px variables.$space-20px;
         font-size: variables.$font-size-small;
     }
+
+    &__message {
+        font-size: variables.$font-size-small;
+
+        &--success {
+            color: variables.$feedback__message--success;
+        }
+
+        &--error {
+            color: variables.$feedback__message--error;
+        }
+    }
 }
 
 .select {
     padding: variables.$space-12px;
     border: 1px solid variables.$color-border;
     background-color: variables.$color-white;
+    transition: border-color 0.3s ease;
 
     &:invalid {
         color: variables.$color-muted;
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid variables.$color-accent;
     }
 
     option {

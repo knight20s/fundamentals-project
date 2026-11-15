@@ -60,6 +60,10 @@
 
     &__actions-btn, &__actions-link {
         position: relative;
+
+        &:focus {
+            outline: none;
+        }
     }
 
     &__actions-icon {
@@ -67,7 +71,9 @@
     }
 
     &__actions-btn:hover &__actions-icon,
-    &__actions-link:hover &__actions-icon {
+    &__actions-link:hover &__actions-icon,
+    &__actions-btn:focus-visible &__actions-icon,
+    &__actions-link:focus-visible &__actions-icon {
         @extend %header-link-hover;
     }
 

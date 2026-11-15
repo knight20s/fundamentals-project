@@ -46,3 +46,20 @@ export function initAddToCart(products: Product[]): void {
         });
     })
 }
+
+export function getRandomProducts(products: Product[], count: number): Product[] {
+    const productsCopy = [...products];
+    return productsCopy.sort(() => Math.random() - 0.5).slice(0, count);
+}
+
+export function renderStars(rating: number, starClass: string): string{
+    const filled = Math.round(rating);
+    let stars = "";
+
+    for (let i = 1; i <= 5; i++) {
+        const icon = i <= filled ? "star.svg" : "star-muted.svg";
+        stars += `<img class="${starClass}" src="/src/img/icons/${icon}" alt="">`;
+    }
+
+    return stars;
+}

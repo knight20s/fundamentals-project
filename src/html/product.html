@@ -65,12 +65,10 @@
 
 <main class="main">
     <section class="product container">
-        <h1 class="product__title">Global Explorer Max Comfort
-            Suitcase Pro
-        </h1>
+        <h1 class="product__title"></h1>
 
         <div class="product__gallery">
-            <img class="product__img" src="../img/product/suitcase-yellow.png"
+            <img class="product__img" src=""
                  alt="Global Explorer Max Comfort Suitcase Pro">
             <ul class="product__thumbs">
                 <li class="product__thumb">
@@ -94,17 +92,13 @@
         <div class="product__info">
             <div class="product__rating">
                 <div class="product__rating-stars" role="img" aria-label="Rating: 5 out of 5">
-                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
-                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
-                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
-                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
-                    <img class="product__rating-star" src="../img/icons/star.svg" alt="">
+
                 </div>
 
                 <p class="product__rating-count">(1 Clients Review)</p>
             </div>
 
-            <p class="product__price">$250</p>
+            <p class="product__price"></p>
 
             <div class="product__description">
                 <p class="product__description-text">
@@ -162,9 +156,9 @@
 
             <div class="product__actions">
                 <div class="product__quantity">
-                    <button class="product__quantity-btn" type="button" aria-label="Decrease quantity">-</button>
+                    <button class="product__quantity-btn" type="button" aria-label="Decrease quantity" data-action="decrease">-</button>
                     <span class="product__quantity-value">1</span>
-                    <button class="product__quantity-btn" type="button" aria-label="Increase quantity">+</button>
+                    <button class="product__quantity-btn" type="button" aria-label="Increase quantity" data-action="increase">+</button>
                 </div>
                 <button class="product__btn btn" type="button">Add To Cart</button>
             </div>
@@ -252,7 +246,7 @@
                     </ul>
                 </div>
 
-                <form class="review-form">
+                <form class="review-form" novalidate>
                     <h2 class="review-form__title">Add a review</h2>
                     <p class="review-form__note">Your email address won’t be shared with anybody. Required fields have the symbol *</p>
 
@@ -282,6 +276,7 @@
                         Save my name, email, and website in this browser for when I leave another comment.                    </label>
 
                     <button class="review-form__btn btn" type="submit">Submit</button>
+                    <p class="review-form__message" role="status" hidden></p>
                 </form>
             </div>
         </div>
@@ -299,40 +294,7 @@
         <h2 class="related-products__title">You May Also Like</h2>
 
         <ul class="related-products__list">
-            <li class="related-products__item products-card">
-                <a class="products-card__link" href="../html/product.html">
-                    <img class="products-card__img" src="../img/catalog/suitcase-black.png" alt="Black suitcase">
-                    <span class="products-card__badge">sale</span>
-                    <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
-                    <p class="products-card__price">$250</p>
-                </a>
-                <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
-            </li>
-            <li class="related-products__item products-card">
-                <a class="products-card__link" href="../html/product.html">
-                    <img class="products-card__img" src="../img/home/suitcase-blue-2.jpg" alt="Blue suitcase">
-                    <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
-                    <p class="products-card__price">$250</p>
-                </a>
-                <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
-            </li>
-            <li class="related-products__item products-card">
-                <a class="products-card__link" href="../html/product.html">
-                    <img class="products-card__img" src="../img/catalog/suitcase-red-1.png" alt="Red suitcase">
-                    <span class="products-card__badge">sale</span>
-                    <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
-                    <p class="products-card__price">$250</p>
-                </a>
-                <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
-            </li>
-            <li class="related-products__item products-card">
-                <a class="products-card__link" href="../html/product.html">
-                    <img class="products-card__img" src="../img/catalog/suitcase-orange.png" alt="Orange suitcase">
-                    <h3 class="products-card__title">Vel vestibulum elit tuvel euqen.</h3>
-                    <p class="products-card__price">$250</p>
-                </a>
-                <button class="products-card__btn btn btn--small" type="button">Add To Cart</button>
-            </li>
+
         </ul>
     </section>
 </main>
@@ -438,6 +400,29 @@
 
     <p class="footer__copyright">© Copyright 2025</p>
 </footer>
+
+<dialog class="login" id="login-modal" aria-labelledby="login-title">
+    <form class="login__form" novalidate>
+        <button class="login__close" type="button" aria-label="Close">&times;</button>
+        <h2 class="login__title" id="login-title">Log In</h2>
+
+        <label class="login__label" for="login-email">Email address *</label>
+        <input class="login__input" type="email" id="login-email" name="email" autocomplete="email" required autofocus>
+
+        <label class="login__label" for="login-password">Password *</label>
+        <div class="login__password">
+            <input class="login__input" type="password" id="login-password" name="password"
+                   autocomplete="current-password" required>
+            <button class="login__eye" type="button" aria-label="Show password" aria-pressed="false">
+                <img class="login__eye-icon login__eye-icon--show" src="../img/icons/eye.svg" alt="">
+                <img class="login__eye-icon login__eye-icon--hide" src="../img/icons/eye-off.svg" alt="">
+            </button>
+        </div>
+
+        <p class="login__message" role="alert" hidden></p>
+        <button class="login__btn btn" type="submit">Log In</button>
+    </form>
+</dialog>
 
 <script type="module" src="../../dist/js/main.js"></script>
 <script type="module" src="../../dist/js/product.js"></script>

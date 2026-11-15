@@ -37,4 +37,17 @@ export function initAddToCart(products) {
         });
     });
 }
+export function getRandomProducts(products, count) {
+    const productsCopy = [...products];
+    return productsCopy.sort(() => Math.random() - 0.5).slice(0, count);
+}
+export function renderStars(rating, starClass) {
+    const filled = Math.round(rating);
+    let stars = "";
+    for (let i = 1; i <= 5; i++) {
+        const icon = i <= filled ? "star.svg" : "star-muted.svg";
+        stars += `<img class="${starClass}" src="/src/img/icons/${icon}" alt="">`;
+    }
+    return stars;
+}
 //# sourceMappingURL=card.js.map
